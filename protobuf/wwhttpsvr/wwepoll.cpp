@@ -1,13 +1,12 @@
-#include "Epoll.h"
-#include "HttpRequest.h"
-#include "ThreadPool.h"
-
 #include <iostream>
 #include <cassert>
 #include <cstring> // perror
 
 #include <unistd.h> // close
 
+#include "wwepoll.h"
+#include "wwhttprequest.h"
+#include "wwthreadpool.h"
 using namespace swings;
 
 Epoll::Epoll() 

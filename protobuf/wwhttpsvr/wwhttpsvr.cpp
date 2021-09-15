@@ -1,10 +1,4 @@
-#include "HttpServer.h"
-#include "HttpRequest.h"
-#include "HttpResponse.h"
-#include "Utils.h"
-#include "Epoll.h"
-#include "ThreadPool.h"
-#include "Timer.h"
+
 
 #include <iostream>
 #include <functional> // bind
@@ -15,6 +9,13 @@
 #include <sys/socket.h> // accept
 #include <arpa/inet.h> // sockaddr_in
 
+#include "wwhttpsvr.h"
+#include "wwhttprequest.h"
+#include "wwhttpresponse.h"
+#include "wwhttputils.h"
+#include "wwepoll.h"
+#include "wwthreadpool.h"
+#include "wwtimer.h"
 using namespace swings;
 
 HttpServer::HttpServer(int port, int numThread) 

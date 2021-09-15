@@ -1,10 +1,9 @@
-#include "HttpRequest.h"
-
 #include <iostream>
 #include <cassert>
 
 #include <unistd.h>
 
+#include "wwhttprequest.h"
 using namespace swings;
 
 HttpRequest::HttpRequest(int fd)

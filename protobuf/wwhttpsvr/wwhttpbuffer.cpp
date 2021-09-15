@@ -1,11 +1,10 @@
-#include "Buffer.h"
-
 #include <cstring> // perror
 #include <iostream>
 
 #include <unistd.h> // write
 #include <sys/uio.h> // readv
 
+#include "wwhttpbuffer.h"
 using namespace swings;
 
 ssize_t Buffer::readFd(int fd, int* savedErrno)

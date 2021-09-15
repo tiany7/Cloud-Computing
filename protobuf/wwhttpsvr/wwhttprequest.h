@@ -1,11 +1,13 @@
 #ifndef __HTTP_REQUEST_H__
 #define __HTTP_REQUEST_H__
 
-#include "Buffer.h"
+
 
 #include <string>
 #include <map>
 #include <iostream>
+
+#include "wwhttpbuffer.h"
 
 #define STATIC_ROOT "../www"
 

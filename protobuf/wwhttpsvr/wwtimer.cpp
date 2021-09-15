@@ -1,8 +1,7 @@
-#include "Timer.h"
-#include "HttpRequest.h"
-
 #include <cassert>
 
+#include "wwtimer.h"
+#include "wwhttprequest.h"
 using namespace swings;
 
 void TimerManager::addTimer(HttpRequest* request, 

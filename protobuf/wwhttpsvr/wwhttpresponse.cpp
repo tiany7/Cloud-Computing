@@ -1,5 +1,3 @@
-#include "HttpResponse.h"
-#include "Buffer.h"
 
 #include <string>
 #include <iostream>
@@ -10,6 +8,9 @@
 #include <unistd.h> // close
 #include <sys/stat.h> // stat
 #include <sys/mman.h> // mmap, munmap
+
+#include "wwhttpresponse.h"
+#include "wwhttpbuffer.h"
 
 using namespace swings;
 
