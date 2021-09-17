@@ -1,5 +1,8 @@
 
 #include <bits/stdc++.h>
+
+#include <sys/time.h>
+#include <stdlib.h>
 #ifndef TESTENV_FASTLOG_H
 #define TESTENV_FASTLOG_H
 
@@ -100,9 +103,37 @@ string GetLogFileName(){
     iFileName += ((to_string(p->tm_mday).length() > 1) ?  to_string(p->tm_mday) : ("0" + to_string(p->tm_mday)));
     iFileName += ((to_string(p->tm_hour).length() > 1) ?  to_string(p->tm_hour) : ("0" + to_string(p->tm_hour)));
     return "log" + iFileName + ".txt";
-
 }
 
+
+string GetTimeMs(){
+    string defaultTime = "19700101000000000";
+    try
+    {
+        struct timeval curTime;
+        gettimeofday(&curTime, NULL);
+        int milli = curTime.tv_usec / 1000;
+
+        char buffer[80] = {0};
+        struct tm nowTime;
+        localtime_r(&curTime.tv_sec, &nowTime);//把得到的值存入临时分配的内存中，线程安全
+        strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S:", &nowTime);
+
+        char currentTime[84] = {0};
+        snprintf(currentTime, sizeof(currentTime), "%s%03d", buffer, milli);
+
+        return currentTime;
+    }
+    catch(const std::exception& e)
+    {
+        return defaultTime;
+    }
+    catch (...)
+    {
+        return defaultTime;
+    }
+
+}
 //  编译器定义的一个局部静态变量,用于存放函数的名字
 //  __FUNCTION__ ：函数名
 //  __TIME__ ：文件运行的时间
@@ -113,11 +144,13 @@ string GetLogFileName(){
 //  如果可变参数被忽略或为空，“##”操作将使预处理器去除掉它前面的那个逗号，避免报错
 
 #define XLOG( args...) do{ \
-    stringstream str;                           \
+    stringstream str;      \
+    str<<GetTimeMs()<<" ";\
     testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
     ofstream outfile;      \
-    outfile.open(("../../../protobuf/log/error/" + GetLogFileName()).c_str());     \
-    outfile<<str.str()<<endl;    \
+    std::string oFileName = ("./log/error/"+ GetLogFileName());                      \
+    outfile.open(oFileName.c_str(), ios_base::app);     \
+    outfile<<str.str();    \
     outfile.close();\
 }while(0)
 //#define XLOG_ERR( args...) testLog(cerr,__FILE__, __func__, __LINE__ , #args, ##args)
