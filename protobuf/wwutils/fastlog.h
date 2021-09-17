@@ -106,8 +106,8 @@ string GetLogFileName(){
     stringstream str;                           \
     testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
     ofstream outfile;      \
-    outfile.open(("//log/error/" + GetLogFileName()).c_str());     \
-    outfile<<str.str();    \
+    outfile.open(("../../../protobuf/log/error/" + GetLogFileName()).c_str());     \
+    outfile<<str.str()<<endl;    \
     outfile.close();\
 }while(0)
 //#define XLOG_ERR( args...) testLog(cerr,__FILE__, __func__, __LINE__ , #args, ##args)
