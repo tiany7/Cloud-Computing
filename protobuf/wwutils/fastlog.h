@@ -30,6 +30,7 @@ void testLog(stringstream & os, const char* dir, const char* func, int lineno,  
 {
     os<< dir<<":"<< func <<"()"  << " at row " << lineno << ":  ";
 
+    //  name是XLOG参数的string形式
     //  运用正则表达式将传入的变长参数名解析分割到vector中
     regex re { "\\s{0,},\\s{0,}" };
     vector<string> nameList = vector<string> {
@@ -102,11 +103,20 @@ string GetLogFileName(){
 
 }
 
+//  编译器定义的一个局部静态变量,用于存放函数的名字
+//  __FUNCTION__ ：函数名
+//  __TIME__ ：文件运行的时间
+//  __LINE__ ：所在行数
+//  __FILE__：文件的名字
+//  XLOG可以在函数中快速打印变量的值，方便定位信息
+//  #args为变量名
+//  如果可变参数被忽略或为空，“##”操作将使预处理器去除掉它前面的那个逗号，避免报错
+
 #define XLOG( args...) do{ \
     stringstream str;                           \
     testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
     ofstream outfile;      \
-    outfile.open(("//log/error/" + GetLogFileName()).c_str());     \
+    outfile.open(("log/error/" + GetLogFileName()).c_str());     \
     outfile<<str.str();    \
     outfile.close();\
 }while(0)
