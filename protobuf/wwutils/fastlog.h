@@ -116,7 +116,7 @@ string GetLogFileName(){
     stringstream str;                           \
     testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
     ofstream outfile;      \
-    outfile.open(("log/error/" + GetLogFileName()).c_str());     \
+    outfile.open(("../../log/error/" + GetLogFileName()).c_str());     \
     outfile<<str.str();    \
     outfile.close();\
 }while(0)
