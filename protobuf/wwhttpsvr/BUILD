@@ -1,3 +1,5 @@
+package(default_visibility = ["//visibility:public"])
+load("@rules_cc//cc:defs.bzl", "cc_library")
 cc_library(
     name = "wwhttpsvr",
     srcs = ["wwepoll.cpp",
@@ -23,6 +25,7 @@ cc_library(
 cc_binary(
     name = "server_main",
     srcs = ["server_main.cpp",],
-    deps = [":wwhttpsvr"],
+    deps = [":wwhttpsvr",
+            "//wwutils:wwfastlog"],
     copts = ["-std=c++17"],
 )

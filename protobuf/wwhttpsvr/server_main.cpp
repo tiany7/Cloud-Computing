@@ -1,5 +1,5 @@
 #include "wwhttpsvr.h"
-
+#include "wwutils/fastlog.h"
 int main(int argc, char** argv)
 {
 	// TODO 读配置文件
@@ -11,9 +11,9 @@ int main(int argc, char** argv)
 	if(argc >= 3) {
 		numThread = atoi(argv[2]);
 	}
-
-	swings::HttpServer server(port, numThread);
-	server.run();
+	XLOG_ERR(numThread, port);
+//	swings::HttpServer server(port, numThread);
+//	server.run();
 
 	return 0;
 }
