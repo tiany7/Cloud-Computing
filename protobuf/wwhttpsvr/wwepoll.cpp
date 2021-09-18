@@ -7,6 +7,7 @@
 #include "wwepoll.h"
 #include "wwhttprequest.h"
 #include "wwthreadpool.h"
+#include "wwutils/fastlog.h"
 using namespace swings;
 
 Epoll::Epoll() 
@@ -14,6 +15,7 @@ Epoll::Epoll()
       events_(MAXEVENTS)
 {
     assert(epollFd_ >= 0);
+    XLOG(epollFd_);
 }
 
 Epoll::~Epoll()

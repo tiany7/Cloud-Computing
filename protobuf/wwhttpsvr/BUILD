@@ -18,6 +18,7 @@ cc_library(
             "wwhttputils.h",
             "wwthreadpool.h",
              "wwtimer.h",],
+    deps = ["//wwutils:wwfastlog",],
     copts = ["-std=c++17"],
     linkopts = ["-lpthread"],
 )
@@ -25,7 +26,6 @@ cc_library(
 cc_binary(
     name = "server_main",
     srcs = ["server_main.cpp",],
-    deps = [":wwhttpsvr",
-            "//wwutils:wwfastlog"],
+    deps = [":wwhttpsvr"],
     copts = ["-std=c++17"],
 )

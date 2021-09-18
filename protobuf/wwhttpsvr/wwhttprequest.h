@@ -9,7 +9,7 @@
 
 #include "wwhttpbuffer.h"
 
-#define STATIC_ROOT "../www"
+#define STATIC_ROOT "../wwfrontendsvr"
 
 namespace swings {
 

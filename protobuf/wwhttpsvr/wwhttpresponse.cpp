@@ -11,6 +11,7 @@
 
 #include "wwhttpresponse.h"
 #include "wwhttpbuffer.h"
+#include "wwutils/fastlog.h"
 
 using namespace swings;
 
@@ -52,6 +53,7 @@ Buffer HttpResponse::makeResponse()
     }
 
     struct stat sbuf;
+    XLOG(path_.data());
     // 文件找不到错误
     if(::stat(path_.data(), &sbuf) < 0) {
         statusCode_ = 404;

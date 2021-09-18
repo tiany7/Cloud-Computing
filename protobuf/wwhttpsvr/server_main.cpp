@@ -1,3 +1,5 @@
+#include <map>
+
 #include "wwhttpsvr.h"
 #include "wwutils/fastlog.h"
 int main(int argc, char** argv)
@@ -11,9 +13,8 @@ int main(int argc, char** argv)
 	if(argc >= 3) {
 		numThread = atoi(argv[2]);
 	}
-	XLOG(numThread, port);
-//	swings::HttpServer server(port, numThread);
-//	server.run();
+	swings::HttpServer server(port, numThread);
+	server.run();
 
 	return 0;
 }

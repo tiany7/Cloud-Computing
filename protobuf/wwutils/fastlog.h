@@ -90,50 +90,81 @@ ostream &operator << ( ostream & os, const map< F, S > &v ) {
     typename map< F , S >::const_iterator it;
     for( it = v.begin(); it != v.end(); it++ ) {
         if( it != v.begin() ) os << ", ";
-        os << it -> first << " = " << it -> second ;
+        os << "<"<<it -> first << " , " << it -> second<<">" ;
     }
     return os << "]";
 }
-string GetLogFileName(){
-    time_t timep;
-    struct tm *p;
-    time(&timep);
-    p = localtime(&timep);
-    string iFileName = to_string(1900 + p->tm_year) + (to_string(1+ p->tm_mon).length() > 1 ? to_string(1+ p->tm_mon) : "0" + to_string(1+ p->tm_mon));
-    iFileName += ((to_string(p->tm_mday).length() > 1) ?  to_string(p->tm_mday) : ("0" + to_string(p->tm_mday)));
-    iFileName += ((to_string(p->tm_hour).length() > 1) ?  to_string(p->tm_hour) : ("0" + to_string(p->tm_hour)));
-    return "log" + iFileName + ".txt";
-}
+class util_methods{
+public:
+    string GetLogFileName(){
+        time_t timep;
+        struct tm *p;
+        time(&timep);
+        p = localtime(&timep);
+        string iFileName = to_string(1900 + p->tm_year) + (to_string(1+ p->tm_mon).length() > 1 ? to_string(1+ p->tm_mon) : "0" + to_string(1+ p->tm_mon));
+        iFileName += ((to_string(p->tm_mday).length() > 1) ?  to_string(p->tm_mday) : ("0" + to_string(p->tm_mday)));
+        iFileName += ((to_string(p->tm_hour).length() > 1) ?  to_string(p->tm_hour) : ("0" + to_string(p->tm_hour)));
+        return "log" + iFileName + ".txt";
+    };
 
 
-string GetTimeMs(){
-    string defaultTime = "19700101000000000";
-    try
+    string GetTimeMs(){
+        string defaultTime = "19700101000000000";
+        try
+        {
+            struct timeval curTime;
+            gettimeofday(&curTime, NULL);
+            int milli = curTime.tv_usec / 1000;
+
+            char buffer[80] = {0};
+            struct tm nowTime;
+            localtime_r(&curTime.tv_sec, &nowTime);//把得到的值存入临时分配的内存中，线程安全
+            strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S:", &nowTime);
+
+            char currentTime[84] = {0};
+            snprintf(currentTime, sizeof(currentTime), "%s%03d", buffer, milli);
+
+            return currentTime;
+        }
+        catch(const std::exception& e)
+        {
+            return defaultTime;
+        }
+        catch (...)
+        {
+            return defaultTime;
+        }
+
+    };
+    void executeCMD(const char *cmd, char *result)
     {
-        struct timeval curTime;
-        gettimeofday(&curTime, NULL);
-        int milli = curTime.tv_usec / 1000;
-
-        char buffer[80] = {0};
-        struct tm nowTime;
-        localtime_r(&curTime.tv_sec, &nowTime);//把得到的值存入临时分配的内存中，线程安全
-        strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S:", &nowTime);
-
-        char currentTime[84] = {0};
-        snprintf(currentTime, sizeof(currentTime), "%s%03d", buffer, milli);
-
-        return currentTime;
-    }
-    catch(const std::exception& e)
-    {
-        return defaultTime;
-    }
-    catch (...)
-    {
-        return defaultTime;
-    }
-
-}
+        char buf_ps[30];
+        char ps[30] = {0};
+        FILE *ptr;
+        strcpy(ps, cmd);
+        if((ptr=popen(ps, "r"))!=NULL)
+        {
+            while(fgets(buf_ps, 1024, ptr)!=NULL)
+            {
+                strcat(result, buf_ps);
+                break;
+            }
+            pclose(ptr);
+            ptr = nullptr;
+        }
+        else
+        {
+            printf("popen %s error\n", ps);
+        }
+    };
+//    void executeWrite(const char *cmd)
+//    {
+//        char ps[30] = {0};
+//        FILE *ptr;
+//        strcpy(ps, cmd);
+//        assert((ptr=popen(ps, "w")) != NULL);
+//    };
+};
 //  编译器定义的一个局部静态变量,用于存放函数的名字
 //  __FUNCTION__ ：函数名
 //  __TIME__ ：文件运行的时间
@@ -144,11 +175,24 @@ string GetTimeMs(){
 //  如果可变参数被忽略或为空，“##”操作将使预处理器去除掉它前面的那个逗号，避免报错
 
 #define XLOG( args...) do{ \
+    char res[20] = {0};    \
+    util_methods().executeCMD("find log/error/*.txt | wc -l", res); \
+    int num = atoi(res);   \
+    if (num > 3){          \     \
+        string cmd;        \
+        cmd += "find ./log/error/ -name '*.txt' | xargs tar -zcvf ";\
+        cmd += util_methods().GetLogFileName().substr(3, 10) + ".tar.gz";                   \
+        cout<<cmd<<endl;                   \
+        system(cmd.c_str());                                        \
+        system("mv *tar.gz ./log/error/")                   \
+        system("rm -fr ./log/error/*.txt");                       \
+    }                      \
     stringstream str;      \
-    str<<GetTimeMs()<<" ";\
+    str<<util_methods().GetTimeMs()<<" "; \
+    str<<std::this_thread::get_id()<<" ";                       \
     testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
     ofstream outfile;      \
-    std::string oFileName = ("./log/error/"+ GetLogFileName());                      \
+    std::string oFileName = ("./log/error/"+ util_methods().GetLogFileName());                      \
     outfile.open(oFileName.c_str(), ios_base::app);     \
     outfile<<str.str();    \
     outfile.close();\

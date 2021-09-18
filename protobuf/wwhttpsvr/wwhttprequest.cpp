@@ -4,6 +4,8 @@
 #include <unistd.h>
 
 #include "wwhttprequest.h"
+#include "wwutils/fastlog.h"
+
 using namespace swings;
 
 HttpRequest::HttpRequest(int fd)
@@ -154,7 +156,7 @@ std::string HttpRequest::getMethod() const
         res = "Put";
     else if(method_ == Delete)
         res = "DELETE";
-    
+    XLOG(method_);
     return res;
 }
 
