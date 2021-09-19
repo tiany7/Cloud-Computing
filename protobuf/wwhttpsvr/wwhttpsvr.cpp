@@ -16,6 +16,7 @@
 #include "wwepoll.h"
 #include "wwthreadpool.h"
 #include "wwtimer.h"
+#include "wwutils/fastlog.h"
 using namespace swings;
 
 HttpServer::HttpServer(int port, int numThread) 

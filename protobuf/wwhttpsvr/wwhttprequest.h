@@ -9,7 +9,7 @@
 
 #include "wwhttpbuffer.h"
 
-#define STATIC_ROOT "../wwfrontendsvr"
+#define STATIC_ROOT "/home/ubuntu/Cloud-Computing/protobuf/wwfrontendsvr"
 
 namespace swings {
 

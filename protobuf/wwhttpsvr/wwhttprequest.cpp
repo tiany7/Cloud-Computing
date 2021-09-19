@@ -17,6 +17,7 @@ HttpRequest::HttpRequest(int fd)
       version_(Unknown)
 {
     assert(fd_ >= 0);
+    XLOG(fd_);
 }
 
 HttpRequest::~HttpRequest()
@@ -27,12 +28,14 @@ HttpRequest::~HttpRequest()
 int HttpRequest::read(int* savedErrno)
 {
     int ret = inBuff_.readFd(fd_, savedErrno);
+    XLOG(*savedErrno);
     return ret;
 }
 
 int HttpRequest::write(int* savedErrno)
 {
     int ret = outBuff_.writeFd(fd_, savedErrno);
+    XLOG(*savedErrno);
     return ret;
 }
 

@@ -138,19 +138,20 @@ public:
     };
     void executeCMD(const char *cmd, char *result)
     {
-        char buf_ps[30];
-        char ps[30] = {0};
+        char buf_ps[20];
+        char ps[20] = {0};
         FILE *ptr;
         strcpy(ps, cmd);
-        if((ptr=popen(ps, "r"))!=NULL)
+        if((ptr = popen(ps, "r")) != NULL)
         {
-            while(fgets(buf_ps, 1024, ptr)!=NULL)
+            while(fgets(buf_ps, 20, ptr)!=NULL)
             {
                 strcat(result, buf_ps);
                 break;
             }
             pclose(ptr);
             ptr = nullptr;
+            return;
         }
         else
         {
@@ -175,24 +176,22 @@ public:
 //  如果可变参数被忽略或为空，“##”操作将使预处理器去除掉它前面的那个逗号，避免报错
 
 #define XLOG( args...) do{ \
-    char res[20] = {0};    \
-    util_methods().executeCMD("find log/error/*.txt | wc -l", res); \
-    int num = atoi(res);   \
-    if (num > 3){          \     \
+    auto res = system("sudo find /home/ubuntu/Cloud-Computing/log/error/*.txt | wc -l"); \
+    int num = atoi(to_string(res).c_str());   \
+    if (num > 20){              \
         string cmd;        \
-        cmd += "find ./log/error/ -name '*.txt' | xargs tar -zcvf ";\
+        cmd += "find /home/ubuntu/Cloud-Computing/log/error/ -name '*.txt' | xargs tar -zcvf ";\
         cmd += util_methods().GetLogFileName().substr(3, 10) + ".tar.gz";                   \
-        cout<<cmd<<endl;                   \
         system(cmd.c_str());                                        \
-        system("mv *tar.gz ./log/error/")                   \
-        system("rm -fr ./log/error/*.txt");                       \
+        system("mv *tar.gz /home/ubuntu/Cloud-Computing/log/error/");                   \
+        system("rm -fr /home/ubuntu/Cloud-Computing/log/error/*.txt");                       \
     }                      \
     stringstream str;      \
     str<<util_methods().GetTimeMs()<<" "; \
     str<<std::this_thread::get_id()<<" ";                       \
     testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
     ofstream outfile;      \
-    std::string oFileName = ("./log/error/"+ util_methods().GetLogFileName());                      \
+    std::string oFileName = ("/home/ubuntu/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
     outfile.open(oFileName.c_str(), ios_base::app);     \
     outfile<<str.str();    \
     outfile.close();\
