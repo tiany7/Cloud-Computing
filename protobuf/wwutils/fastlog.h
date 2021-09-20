@@ -102,8 +102,8 @@ public:
         time(&timep);
         p = localtime(&timep);
         string iFileName = to_string(1900 + p->tm_year) + (to_string(1+ p->tm_mon).length() > 1 ? to_string(1+ p->tm_mon) : "0" + to_string(1+ p->tm_mon));
-        iFileName += ((to_string(p->tm_mday).length() > 1) ?  to_string(p->tm_mday) : ("0" + to_string(p->tm_mday)));
-        iFileName += ((to_string(p->tm_hour).length() > 1) ?  to_string(p->tm_hour) : ("0" + to_string(p->tm_hour)));
+        iFileName += ((to_string((p->tm_mday)).length() > 1) ?  to_string(p->tm_mday) : ("0" + to_string(p->tm_mday)));
+        iFileName += ((to_string((p->tm_hour - 2 - 3 + 24) % 24).length() > 1) ?  to_string((p->tm_hour - 2 - 3 + 24) % 24) : ("0" + to_string((p->tm_hour - 2 - 3 + 24) % 24)));
         return "log" + iFileName + ".txt";
     };
 
@@ -119,6 +119,8 @@ public:
             char buffer[80] = {0};
             struct tm nowTime;
             localtime_r(&curTime.tv_sec, &nowTime);//把得到的值存入临时分配的内存中，线程安全
+            nowTime.tm_hour += 24 - 5;
+            nowTime.tm_hour %= 24; // 做时区转换用
             strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S:", &nowTime);
 
             char currentTime[84] = {0};
@@ -174,7 +176,6 @@ public:
 //  XLOG可以在函数中快速打印变量的值，方便定位信息
 //  #args为变量名
 //  如果可变参数被忽略或为空，“##”操作将使预处理器去除掉它前面的那个逗号，避免报错
-
 #define XLOG( args...) do{ \
     auto res = system("sudo find /home/ubuntu/Cloud-Computing/log/error/*.txt | wc -l"); \
     int num = atoi(to_string(res).c_str());   \
@@ -188,7 +189,54 @@ public:
     }                      \
     stringstream str;      \
     str<<util_methods().GetTimeMs()<<" "; \
+    str<<std::this_thread::get_id()<<" "<<"\033[1m\033[32m";                       \
+    str<<"XLOG ";                       \
+    testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
+    ofstream outfile;      \
+    std::string oFileName = ("/home/ubuntu/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
+    outfile.open(oFileName.c_str(), ios_base::app);     \
+    str<<"\033[0m;";                       \
+    outfile<<str.str();    \
+    outfile.close();\
+}while(0)
+#define XLOG_ERR( args...) do{ \
+    auto res = system("sudo find /home/ubuntu/Cloud-Computing/log/error/*.txt | wc -l"); \
+    int num = atoi(to_string(res).c_str());   \
+    if (num > 20){              \
+        string cmd;        \
+        cmd += "find /home/ubuntu/Cloud-Computing/log/error/ -name '*.txt' | xargs tar -zcvf ";\
+        cmd += util_methods().GetLogFileName().substr(3, 10) + ".tar.gz";                   \
+        system(cmd.c_str());                                        \
+        system("mv *tar.gz /home/ubuntu/Cloud-Computing/log/error/");                   \
+        system("rm -fr /home/ubuntu/Cloud-Computing/log/error/*.txt");                       \
+    }                      \
+    stringstream str;      \
+    str<<util_methods().GetTimeMs()<<" "; \
+    str<<std::this_thread::get_id()<<" "<<"\033[31m";                       \
+    str<<"XLOG_ERR ";                                                 \
+    testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
+    ofstream outfile;      \
+    std::string oFileName = ("/home/ubuntu/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
+    outfile.open(oFileName.c_str(), ios_base::app);     \
+    str<<"\033[0m;";                       \
+    outfile<<str.str();    \
+    outfile.close();\
+}while(0)
+#define LOG( args...) do{ \
+    auto res = system("sudo find /home/ubuntu/Cloud-Computing/log/error/*.txt | wc -l"); \
+    int num = atoi(to_string(res).c_str());   \
+    if (num > 20){              \
+        string cmd;        \
+        cmd += "find /home/ubuntu/Cloud-Computing/log/error/ -name '*.txt' | xargs tar -zcvf ";\
+        cmd += util_methods().GetLogFileName().substr(3, 10) + ".tar.gz";                   \
+        system(cmd.c_str());                                        \
+        system("mv *tar.gz /home/ubuntu/Cloud-Computing/log/error/");                   \
+        system("rm -fr /home/ubuntu/Cloud-Computing/log/error/*.txt");                       \
+    }                      \
+    stringstream str;      \
+    str<<util_methods().GetTimeMs()<<" "; \
     str<<std::this_thread::get_id()<<" ";                       \
+    str<<"LOG ";                                                 \
     testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
     ofstream outfile;      \
     std::string oFileName = ("/home/ubuntu/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
@@ -196,6 +244,27 @@ public:
     outfile<<str.str();    \
     outfile.close();\
 }while(0)
-//#define XLOG_ERR( args...) testLog(cerr,__FILE__, __func__, __LINE__ , #args, ##args)
-//#define XLOG_STD( args...) testLog(cout, __FILE__, __func__, __LINE__ , #args, ##args)
+#define XLOG_LER( args...) do{ \
+    auto res = system("sudo find /home/ubuntu/Cloud-Computing/log/error/*.txt | wc -l"); \
+    int num = atoi(to_string(res).c_str());   \
+    if (num > 20){              \
+        string cmd;        \
+        cmd += "find /home/ubuntu/Cloud-Computing/log/error/ -name '*.txt' | xargs tar -zcvf ";\
+        cmd += util_methods().GetLogFileName().substr(3, 10) + ".tar.gz";                   \
+        system(cmd.c_str());                                        \
+        system("mv *tar.gz /home/ubuntu/Cloud-Computing/log/error/");                   \
+        system("rm -fr /home/ubuntu/Cloud-Computing/log/error/*.txt");                       \
+    }                      \
+    stringstream str;      \
+    str<<util_methods().GetTimeMs()<<" "; \
+    str<<std::this_thread::get_id()<<" "<<"\033[1m\033[33m";                       \
+    str<<"XLOG_LER ";                                                                            \
+    testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
+    ofstream outfile;      \
+    std::string oFileName = ("/home/ubuntu/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
+    outfile.open(oFileName.c_str(), ios_base::app);     \
+    str<<"\033[0m;";                       \
+    outfile<<str.str();    \
+    outfile.close();\
+}while(0)
 #endif //TESTENV_FASTLOG_H

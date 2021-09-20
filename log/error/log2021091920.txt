@@ -1,0 +1,7 @@
+2021-09-19 22:37:28:551 140005670459200 wwhttpsvr/wwhttprequest.cpp:HttpRequest() at row 20:  fd_ = 3, 
+2021-09-19 22:37:28:560 140005670459200 wwhttpsvr/wwepoll.cpp:Epoll() at row 18:  epollFd_ = 4, 
+2021-09-19 22:37:36:491 140005670459200 wwhttpsvr/wwhttprequest.cpp:HttpRequest() at row 20:  fd_ = 5, 
+2021-09-19 22:37:36:501 140005670459200 wwhttpsvr/wwhttprequest.cpp:HttpRequest() at row 20:  fd_ = 6, 
+2021-09-19 22:37:36:512 140005645276928 wwhttpsvr/wwhttprequest.cpp:read() at row 31:  *savedErrno = 0, 
+2021-09-19 22:37:36:523 140005645276928 wwhttpsvr/wwhttpresponse.cpp:makeResponse() at row 56:  path_.data() = /home/ubuntu/Cloud-Computing/protobuf/wwfrontendsvr/index.html, 
+2021-09-19 22:37:36:533 140005653669632 wwhttpsvr/wwhttprequest.cpp:write() at row 38:  *savedErrno = 0, 
