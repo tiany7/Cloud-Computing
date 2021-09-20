@@ -15,7 +15,7 @@ Epoll::Epoll()
       events_(MAXEVENTS)
 {
     assert(epollFd_ >= 0);
-    XLOG(epollFd_);
+    LOG(epollFd_);
 }
 
 Epoll::~Epoll()

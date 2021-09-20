@@ -17,7 +17,7 @@ HttpRequest::HttpRequest(int fd)
       version_(Unknown)
 {
     assert(fd_ >= 0);
-    XLOG(fd_);
+    LOG(fd_);
 }
 
 HttpRequest::~HttpRequest()
@@ -28,14 +28,14 @@ HttpRequest::~HttpRequest()
 int HttpRequest::read(int* savedErrno)
 {
     int ret = inBuff_.readFd(fd_, savedErrno);
-    XLOG(*savedErrno);
+    LOG(*savedErrno);
     return ret;
 }
 
 int HttpRequest::write(int* savedErrno)
 {
     int ret = outBuff_.writeFd(fd_, savedErrno);
-    XLOG(*savedErrno);
+    LOG(*savedErrno);
     return ret;
 }
 
@@ -159,7 +159,7 @@ std::string HttpRequest::getMethod() const
         res = "Put";
     else if(method_ == Delete)
         res = "DELETE";
-    XLOG(method_);
+    LOG(method_);
     return res;
 }
 

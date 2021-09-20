@@ -1,0 +1,6 @@
+2021-09-20 01:14:14:767 140187305867072 [1m[32mXLOG wwhttpsvr/wwhttprequest.cpp:HttpRequest() at row 20:  fd_ = 5, 
+[0m;2021-09-20 01:14:15:313 140187305867072 [1m[32mXLOG wwhttpsvr/wwhttprequest.cpp:HttpRequest() at row 20:  fd_ = 5, 
+[0m;2021-09-20 01:14:15:324 140187297470208 [1m[32mXLOG wwhttpsvr/wwhttprequest.cpp:read() at row 31:  *savedErrno = 0, 
+[0m;2021-09-20 01:14:18:333 140187305867072 [1m[32mXLOG wwhttpsvr/wwhttprequest.cpp:HttpRequest() at row 20:  fd_ = 6, 
+[0m;2021-09-20 01:14:18:879 140187305867072 [1m[32mXLOG wwhttpsvr/wwhttprequest.cpp:HttpRequest() at row 20:  fd_ = 6, 
+[0m;

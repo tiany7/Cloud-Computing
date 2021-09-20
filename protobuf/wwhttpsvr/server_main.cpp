@@ -13,8 +13,7 @@ int main(int argc, char** argv)
 	if(argc >= 3) {
 		numThread = atoi(argv[2]);
 	}
-	XLOG_ERR(port);
-	XLOG_LER(numThread);
+	XLOG_LER(port, numThread);
 	swings::HttpServer server(port, numThread);
 	server.run();
 
