@@ -1,4 +1,20 @@
-
+#include <google/protobuf/port_undef.inc>
+#include <google/protobuf/io/coded_stream.h>
+#include <google/protobuf/arena.h>
+#include <google/protobuf/arenastring.h>
+#include <google/protobuf/generated_message_table_driven.h>
+#include <google/protobuf/generated_message_util.h>
+#include <google/protobuf/inlined_string_field.h>
+#include <google/protobuf/metadata.h>
+#include <google/protobuf/generated_message_reflection.h>
+#include <google/protobuf/message.h>
+#include <google/protobuf/repeated_field.h>  // IWYU pragma: export
+#include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/unknown_field_set.h>
+// @@protoc_insertion_point(includes)
+#include <google/protobuf/port_def.inc>
+#define PROTOBUF_INTERNAL_EXPORT_wwtest_2fexample_2eproto
+PROTOBUF_NAMESPACE_OPEN
 #include <bits/stdc++.h>
 
 #include <sys/time.h>
@@ -29,7 +45,7 @@ private:
 };
 
 template<typename ...Args>
-void testLog(stringstream & os, const char* dir, const char* func, int lineno,  string name, Args && ...args)
+void testLog(ostringstream & os, const char* dir, const char* func, int lineno,  string name, Args && ...args)
 {
     os<< dir<<":"<< func <<"()"  << " at row " << lineno << ":  ";
 
@@ -177,91 +193,91 @@ public:
 //  #args为变量名
 //  如果可变参数被忽略或为空，“##”操作将使预处理器去除掉它前面的那个逗号，避免报错
 #define XLOG( args...) do{ \
-    auto res = system("sudo find /home/ubuntu/Cloud-Computing/log/error/*.txt | wc -l"); \
+    auto res = system("sudo find /home/azureuser/Cloud-Computing/log/error/*.txt | wc -l"); \
     int num = atoi(to_string(res).c_str());   \
     if (num > 20){              \
         string cmd;        \
-        cmd += "find /home/ubuntu/Cloud-Computing/log/error/ -name '*.txt' | xargs tar -zcvf ";\
+        cmd += "find /home/azureuser/Cloud-Computing/log/error/ -name '*.txt' | xargs tar -zcvf ";\
         cmd += util_methods().GetLogFileName().substr(3, 10) + ".tar.gz";                   \
         system(cmd.c_str());                                        \
-        system("mv *tar.gz /home/ubuntu/Cloud-Computing/log/error/");                   \
-        system("rm -fr /home/ubuntu/Cloud-Computing/log/error/*.txt");                       \
+        system("mv *tar.gz /home/azureuser/Cloud-Computing/log/error/");                   \
+        system("rm -fr /home/azureuser/Cloud-Computing/log/error/*.txt");                       \
     }                      \
-    stringstream str;      \
+    ostringstream str;      \
     str<<util_methods().GetTimeMs()<<" "; \
     str<<std::this_thread::get_id()<<" "<<"\033[1m\033[32m";                       \
     str<<"XLOG ";                       \
     testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
     ofstream outfile;      \
-    std::string oFileName = ("/home/ubuntu/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
+    std::string oFileName = ("/home/azureuser/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
     outfile.open(oFileName.c_str(), ios_base::app);     \
     str<<"\033[0m;";                       \
     outfile<<str.str();    \
     outfile.close();\
 }while(0)
 #define XLOG_ERR( args...) do{ \
-    auto res = system("sudo find /home/ubuntu/Cloud-Computing/log/error/*.txt | wc -l"); \
+    auto res = system("sudo find /home/azureuser/Cloud-Computing/log/error/*.txt | wc -l"); \
     int num = atoi(to_string(res).c_str());   \
     if (num > 20){              \
         string cmd;        \
-        cmd += "find /home/ubuntu/Cloud-Computing/log/error/ -name '*.txt' | xargs tar -zcvf ";\
+        cmd += "find /home/azureuser/Cloud-Computing/log/error/ -name '*.txt' | xargs tar -zcvf ";\
         cmd += util_methods().GetLogFileName().substr(3, 10) + ".tar.gz";                   \
         system(cmd.c_str());                                        \
-        system("mv *tar.gz /home/ubuntu/Cloud-Computing/log/error/");                   \
-        system("rm -fr /home/ubuntu/Cloud-Computing/log/error/*.txt");                       \
+        system("mv *tar.gz /home/azureuser/Cloud-Computing/log/error/");                   \
+        system("rm -fr /home/azureuser/Cloud-Computing/log/error/*.txt");                       \
     }                      \
-    stringstream str;      \
+    ostringstream str;      \
     str<<util_methods().GetTimeMs()<<" "; \
     str<<std::this_thread::get_id()<<" "<<"\033[31m";                       \
     str<<"XLOG_ERR ";                                                 \
     testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
     ofstream outfile;      \
-    std::string oFileName = ("/home/ubuntu/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
+    std::string oFileName = ("/home/azureuser/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
     outfile.open(oFileName.c_str(), ios_base::app);     \
     str<<"\033[0m;";                       \
     outfile<<str.str();    \
     outfile.close();\
 }while(0)
 #define LOG( args...) do{ \
-    auto res = system("sudo find /home/ubuntu/Cloud-Computing/log/error/*.txt | wc -l"); \
+    auto res = system("sudo find /home/azureuser/Cloud-Computing/log/error/*.txt | wc -l"); \
     int num = atoi(to_string(res).c_str());   \
     if (num > 20){              \
         string cmd;        \
-        cmd += "find /home/ubuntu/Cloud-Computing/log/error/ -name '*.txt' | xargs tar -zcvf ";\
+        cmd += "find /home/azureuser/Cloud-Computing/log/error/ -name '*.txt' | xargs tar -zcvf ";\
         cmd += util_methods().GetLogFileName().substr(3, 10) + ".tar.gz";                   \
         system(cmd.c_str());                                        \
-        system("mv *tar.gz /home/ubuntu/Cloud-Computing/log/error/");                   \
-        system("rm -fr /home/ubuntu/Cloud-Computing/log/error/*.txt");                       \
+        system("mv *tar.gz /home/azureuser/Cloud-Computing/log/error/");                   \
+        system("rm -fr /home/azureuser/Cloud-Computing/log/error/*.txt");                       \
     }                      \
-    stringstream str;      \
+    ostringstream str;      \
     str<<util_methods().GetTimeMs()<<" "; \
     str<<std::this_thread::get_id()<<" ";                       \
     str<<"LOG ";                                                 \
     testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
     ofstream outfile;      \
-    std::string oFileName = ("/home/ubuntu/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
+    std::string oFileName = ("/home/azureuser/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
     outfile.open(oFileName.c_str(), ios_base::app);     \
     outfile<<str.str();    \
     outfile.close();\
 }while(0)
 #define XLOG_LER( args...) do{ \
-    auto res = system("sudo find /home/ubuntu/Cloud-Computing/log/error/*.txt | wc -l"); \
+    auto res = system("sudo find /home/azureuser/Cloud-Computing/log/error/*.txt | wc -l"); \
     int num = atoi(to_string(res).c_str());   \
     if (num > 20){              \
         string cmd;        \
-        cmd += "find /home/ubuntu/Cloud-Computing/log/error/ -name '*.txt' | xargs tar -zcvf ";\
+        cmd += "find /home/azureuser/Cloud-Computing/log/error/ -name '*.txt' | xargs tar -zcvf ";\
         cmd += util_methods().GetLogFileName().substr(3, 10) + ".tar.gz";                   \
         system(cmd.c_str());                                        \
-        system("mv *tar.gz /home/ubuntu/Cloud-Computing/log/error/");                   \
-        system("rm -fr /home/ubuntu/Cloud-Computing/log/error/*.txt");                       \
+        system("mv *tar.gz /home/azureuser/Cloud-Computing/log/error/");                   \
+        system("rm -fr /home/azureuser/Cloud-Computing/log/error/*.txt");                       \
     }                      \
-    stringstream str;      \
+    ostringstream str;      \
     str<<util_methods().GetTimeMs()<<" "; \
     str<<std::this_thread::get_id()<<" "<<"\033[1m\033[33m";                       \
     str<<"XLOG_LER ";                                                                            \
     testLog(str, __FILE__, __func__,__LINE__ , #args, ##args); \
     ofstream outfile;      \
-    std::string oFileName = ("/home/ubuntu/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
+    std::string oFileName = ("/home/azureuser/Cloud-Computing/log/error/"+ util_methods().GetLogFileName());                      \
     outfile.open(oFileName.c_str(), ios_base::app);     \
     str<<"\033[0m;";                       \
     outfile<<str.str();    \

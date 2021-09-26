@@ -1,0 +1,11 @@
+[32mLoading:[0m 
+[1A[K[32mLoading:[0m 0 packages loaded
+[1A[K[31m[1mERROR: [0merror loading package '': Every .bzl file must have a corresponding package, but '//:protobuf_deps.bzl' does not have one. Please create a BUILD file in the same or any parent directory. Note that this BUILD file does not need to do anything except exist.
+[32mLoading:[0m 0 packages loaded
+[1A[K[32mINFO: [0mElapsed time: 1.936s
+[32mLoading:[0m 0 packages loaded
+[1A[K[32mINFO: [0m0 processes.
+[32mLoading:[0m 0 packages loaded
+[1A[K[31m[1mFAILED:[0m Build did NOT complete successfully (0 packages loaded)
+[1A[K[31m[1mFAILED:[0m Build did NOT complete successfully (0 packages loaded)
+[0m

@@ -1,0 +1,978 @@
+[32mLoading:[0m 
+[1A[K[32mLoading:[0m 0 packages loaded
+[1A[K[32mLoading:[0m 0 packages loaded
+    Fetching @com_google_protobuf; fetching
+[1A[K[1A[K[32mLoading:[0m 0 packages loaded
+    Fetching @com_google_protobuf; fetching
+    Fetching https://github.com/protocolbuffers/protobuf/archive/v3.16.0.tar.gz
+[1A[K[1A[K[1A[K[32mLoading:[0m 0 packages loaded
+    Fetching @com_google_protobuf; fetching
+    Fetching https://github.com/protocolbuffers/protobuf/archive/v3.16.0.tar.gz; 1,277,979B
+[1A[K[1A[K[1A[K[32mLoading:[0m 0 packages loaded
+    Fetching @com_google_protobuf; fetching
+    Fetching https://github.com/protocolbuffers/protobuf/archive/v3.16.0.tar.gz; 2,506,779B
+[1A[K[1A[K[1A[K[32mLoading:[0m 0 packages loaded
+    Fetching @com_google_protobuf; fetching
+    Fetching https://github.com/protocolbuffers/protobuf/archive/v3.16.0.tar.gz; 3,768,346B
+[1A[K[1A[K[1A[K[32mLoading:[0m 0 packages loaded
+    Fetching @com_google_protobuf; fetching
+    Fetching https://github.com/protocolbuffers/protobuf/archive/v3.16.0.tar.gz; 4,964,379B
+[1A[K[1A[K[1A[K[32mLoading:[0m 0 packages loaded
+    Fetching @com_google_protobuf; fetching
+    Fetching ...otobuf; Extracting /home/azureuser/Cloud-Computing/protobuf/wwtest/e81ce4490cbd1fdb5be02df8f7507401/external/com_google_protobuf/temp15628859545412617319/v3.16.0.tar.\
+gz
+[1A[K[1A[K[1A[K[1A[K[32mLoading:[0m 0 packages loaded
+[1A[K[32mLoading:[0m 0 packages loaded
+    currently loading: wwtest
+    Fetching @rules_proto; fetching
+    Fetching @rules_java; fetching
+[1A[K[1A[K[1A[K[1A[K[32mAnalyzing:[0m target //wwtest:main (1 packages loaded)
+[1A[K[32mAnalyzing:[0m target //wwtest:main (1 packages loaded, 0 targets configured)
+[1A[K[32mAnalyzing:[0m target //wwtest:main (6 packages loaded, 6 targets configured)
+    currently loading: @bazel_tools//tools/jdk
+    Fetching @local_config_cc_toolchains; fetching
+[1A[K[1A[K[1A[K[32mAnalyzing:[0m target //wwtest:main (11 packages loaded, 18 targets configured)
+    Fetching @local_config_cc; Restarting.
+[1A[K[1A[K[32mAnalyzing:[0m target //wwtest:main (11 packages loaded, 18 targets configured)
+    Fetching @local_config_cc; fetching
+[1A[K[1A[K[32mAnalyzing:[0m target //wwtest:main (14 packages loaded, 25 targets configured)
+    currently loading: @com_google_protobuf//
+    Fetching @bazel_skylib; fetching
+[1A[K[1A[K[1A[K[32mAnalyzing:[0m target //wwtest:main (15 packages loaded, 48 targets configured)
+    currently loading: @com_google_protobuf//
+    Fetching @rules_python; fetching
+    Fetching https://github.com/bazelbuild/rules_python/archive/4b84ad270387a7c439ebdccfd530e2339601ef27.tar.gz
+[1A[K[1A[K[1A[K[1A[K[32mAnalyzing:[0m target //wwtest:main (16 packages loaded, 74 targets configured)
+[1A[K[32mAnalyzing:[0m target //wwtest:main (17 packages loaded, 338 targets configured)
+[1A[K[32mAnalyzing:[0m target //wwtest:main (18 packages loaded, 573 targets configured)
+[1A[K[32mINFO: [0mAnalyzed target //wwtest:main (18 packages loaded, 573 targets configured).
+
+[1A[K[32mINFO: [0mFound 1 target...
+
+[1A[K[32m[0 / 4][0m [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[1A[K[32m[5 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/wire_format_lite.cc; 0s linux-sandbox
+    [Scann] Compiling uncompr.c
+[1A[K[1A[K[1A[K[32m[6 / 188][0m 2 actions running
+    Compiling src/google/protobuf/wire_format_lite.cc; 0s linux-sandbox
+    Compiling trees.c; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[7 / 188][0m 2 actions running
+    Compiling src/google/protobuf/wire_format_lite.cc; 0s linux-sandbox
+    Compiling inftrees.c; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[8 / 188][0m 2 actions running
+    Compiling src/google/protobuf/wire_format_lite.cc; 0s linux-sandbox
+    Compiling inflate.c; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[9 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/wire_format_lite.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/command_line_interface.cc
+[1A[K[1A[K[1A[K[32m[10 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 0s linux-sandbox
+    [Scann] Compiling inffast.c
+[1A[K[1A[K[1A[K[32m[11 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 0s linux-sandbox
+    Compiling infback.c; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[13 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 0s linux-sandbox
+    Compiling gzread.c; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[14 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 0s linux-sandbox
+    Compiling gzlib.c; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[16 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 1s linux-sandbox
+    Compiling deflate.c; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[17 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 1s linux-sandbox
+    [Scann] Compiling crc32.c
+[1A[K[1A[K[1A[K[32m[19 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 1s linux-sandbox
+    Compiling adler32.c; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[20 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/main.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[20 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/main.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[21 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 2s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/cpp/cpp_primitive_field.cc
+[1A[K[1A[K[1A[K[32m[21 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_primitive_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[21 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_primitive_field.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[22 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/command_line_interface.cc; 4s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/cpp/cpp_enum_field.cc
+[1A[K[1A[K[1A[K[32m[23 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_enum_field.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/plugin.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[23 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_enum_field.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/plugin.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[24 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_enum_field.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/stubs/time.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[25 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_enum_field.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/php/php_generator.cc
+[1A[K[1A[K[1A[K[32m[26 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/php/php_generator.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_primitive_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[26 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/php/php_generator.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_primitive_field.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[27 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/php/php_generator.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/stubs/int128.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[28 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/php/php_generator.cc; 2s linux-sandbox
+    [Scann] Compiling src/google/protobuf/stubs/strutil.cc
+[1A[K[1A[K[1A[K[32m[28 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/php/php_generator.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/stubs/strutil.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[28 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/php/php_generator.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/stubs/strutil.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[29 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/php/php_generator.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_oneof.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[30 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_oneof.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_context.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[30 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_oneof.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_context.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[31 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_context.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/objectivec/objectivec_message_field.cc
+[1A[K[1A[K[1A[K[32m[31 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_context.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_message_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[32 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_message_field.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/cpp/cpp_message_field.cc
+[1A[K[1A[K[1A[K[32m[32 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_message_field.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_message_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[33 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_message_field.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/objectivec/objectivec_message.cc
+[1A[K[1A[K[1A[K[32m[33 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_message_field.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_message.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[33 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_message_field.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_message.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[34 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_message.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/csharp/csharp_wrapper_field.cc
+[1A[K[1A[K[1A[K[32m[34 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_message.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_wrapper_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[35 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/csharp/csharp_wrapper_field.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/objectivec/objectivec_map_field.cc
+[1A[K[1A[K[1A[K[32m[36 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_map_field.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/stubs/bytestream.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[37 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_map_field.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/objectivec/objectivec_helpers.cc
+[1A[K[1A[K[1A[K[32m[37 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_map_field.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_helpers.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[38 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_helpers.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/csharp/csharp_source_generator_base.cc
+[1A[K[1A[K[1A[K[32m[38 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_helpers.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_source_generator_base.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[39 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_helpers.cc; 2s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/objectivec/objectivec_generator.cc
+[1A[K[1A[K[1A[K[32m[39 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_helpers.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_generator.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[40 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_generator.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/map.cc
+[1A[K[1A[K[1A[K[32m[40 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_generator.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/map.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[41 / 188][0m 2 actions running
+    Compiling src/google/protobuf/map.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_file.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[42 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_file.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[42 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_file.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_field.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[43 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_field.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/generated_enum_util.cc
+[1A[K[1A[K[1A[K[32m[44 / 188][0m 2 actions running
+    Compiling src/google/protobuf/generated_enum_util.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/io/strtod.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[45 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/generated_enum_util.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/objectivec/objectivec_extension.cc
+[1A[K[1A[K[1A[K[32m[46 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_extension.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_repeated_message_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[47 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_extension.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc
+[1A[K[1A[K[1A[K[32m[47 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_extension.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[48 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_shared_code_generator.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[48 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_enum_field.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_shared_code_generator.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[49 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_shared_code_generator.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/objectivec/objectivec_enum.cc
+[1A[K[1A[K[1A[K[32m[49 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_shared_code_generator.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_enum.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[50 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_enum.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_repeated_enum_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[50 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_enum.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_repeated_enum_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[51 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_enum.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/js/well_known_types_embed.cc
+[1A[K[1A[K[1A[K[32m[52 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/objectivec/objectivec_enum.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/arenastring.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[53 / 188][0m 2 actions running
+    Compiling src/google/protobuf/arenastring.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/js/js_generator.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[54 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/js/js_generator.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_reflection_class.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[54 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/js/js_generator.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_reflection_class.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[54 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/js/js_generator.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_reflection_class.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[55 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/js/js_generator.cc; 2s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_string_field_lite.cc
+[1A[K[1A[K[1A[K[32m[55 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/js/js_generator.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_string_field_lite.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[55 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/js/js_generator.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_string_field_lite.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[56 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/js/js_generator.cc; 4s linux-sandbox
+    [Scann] Compiling src/google/protobuf/wire_format.cc
+[1A[K[1A[K[1A[K[32m[56 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/js/js_generator.cc; 4s linux-sandbox
+    Compiling src/google/protobuf/wire_format.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[56 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/js/js_generator.cc; 5s linux-sandbox
+    Compiling src/google/protobuf/wire_format.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[56 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/js/js_generator.cc; 6s linux-sandbox
+    Compiling src/google/protobuf/wire_format.cc; 2s linux-sandbox
+[1A[K[1A[K[1A[K[32m[57 / 188][0m 2 actions running
+    Compiling src/google/protobuf/wire_format.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_string_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[57 / 188][0m 2 actions running
+    Compiling src/google/protobuf/wire_format.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_string_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[58 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_string_field.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/internal/protostream_objectsource.cc
+[1A[K[1A[K[1A[K[32m[58 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_string_field.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/internal/protostream_objectsource.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[59 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/util/internal/protostream_objectsource.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/internal/protostream_objectwriter.cc
+[1A[K[1A[K[1A[K[32m[59 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/internal/protostream_objectsource.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/internal/protostream_objectwriter.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[60 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/util/internal/protostream_objectwriter.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/internal/type_info.cc
+[1A[K[1A[K[1A[K[32m[60 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/internal/protostream_objectwriter.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/internal/type_info.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[61 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/util/internal/type_info.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/csharp/csharp_message_field.cc
+[1A[K[1A[K[1A[K[32m[62 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/csharp/csharp_message_field.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/cpp/cpp_generator.cc
+[1A[K[1A[K[1A[K[32m[62 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/csharp/csharp_message_field.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_generator.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[63 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_generator.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/internal/object_writer.cc
+[1A[K[1A[K[1A[K[32m[63 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_generator.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/internal/object_writer.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[64 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/internal/object_writer.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/util/internal/json_stream_parser.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[65 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/internal/json_stream_parser.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_message.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[65 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/internal/json_stream_parser.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_message.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[66 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/csharp/csharp_message.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/internal/json_escaping.cc
+[1A[K[1A[K[1A[K[32m[66 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/csharp/csharp_message.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/util/internal/json_escaping.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[67 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/csharp/csharp_message.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/internal/field_mask_utility.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[67 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/csharp/csharp_message.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/internal/field_mask_utility.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[68 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/csharp/csharp_message.cc; 2s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/internal/error_listener.cc
+[1A[K[1A[K[1A[K[32m[69 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/internal/error_listener.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_map_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[70 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/csharp/csharp_map_field.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/util/internal/datapiece.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[71 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/util/internal/datapiece.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/field_mask_util.cc
+[1A[K[1A[K[1A[K[32m[71 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/internal/datapiece.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/field_mask_util.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[72 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/util/field_mask_util.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/field_comparator.cc
+[1A[K[1A[K[1A[K[32m[72 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/field_mask_util.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/field_comparator.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[73 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/field_comparator.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_message_builder_lite.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[73 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/field_comparator.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_message_builder_lite.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[74 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_message_builder_lite.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/unknown_field_set.cc
+[1A[K[1A[K[1A[K[32m[74 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_message_builder_lite.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/unknown_field_set.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[75 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/unknown_field_set.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/type.pb.cc
+[1A[K[1A[K[1A[K[32m[76 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/type.pb.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/timestamp.pb.cc
+[1A[K[1A[K[1A[K[32m[76 / 188][0m 2 actions running
+    Compiling src/google/protobuf/type.pb.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/timestamp.pb.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[77 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/type.pb.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/csharp/csharp_generator.cc
+[1A[K[1A[K[1A[K[32m[77 / 188][0m 2 actions running
+    Compiling src/google/protobuf/type.pb.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_generator.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[78 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/csharp/csharp_generator.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/cpp/cpp_field.cc
+[1A[K[1A[K[1A[K[32m[78 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/csharp/csharp_generator.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[79 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_field.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/struct.pb.cc
+[1A[K[1A[K[1A[K[32m[79 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_field.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/struct.pb.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[80 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/struct.pb.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/source_context.pb.cc
+[1A[K[1A[K[1A[K[32m[80 / 188][0m 2 actions running
+    Compiling src/google/protobuf/struct.pb.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/source_context.pb.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[81 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/struct.pb.cc; 2s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/csharp/csharp_field_base.cc
+[1A[K[1A[K[1A[K[32m[81 / 188][0m 2 actions running
+    Compiling src/google/protobuf/struct.pb.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_field_base.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[82 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/csharp/csharp_field_base.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/reflection_ops.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[82 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/csharp/csharp_field_base.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/reflection_ops.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[83 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/csharp/csharp_field_base.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/message.cc
+[1A[K[1A[K[1A[K[32m[84 / 188][0m 2 actions running
+    Compiling src/google/protobuf/message.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/map_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[84 / 188][0m 2 actions running
+    Compiling src/google/protobuf/message.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/map_field.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[85 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/map_field.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/csharp/csharp_enum_field.cc
+[1A[K[1A[K[1A[K[32m[85 / 188][0m 2 actions running
+    Compiling src/google/protobuf/map_field.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_enum_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[86 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/csharp/csharp_enum_field.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/io/printer.cc
+[1A[K[1A[K[1A[K[32m[86 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/csharp/csharp_enum_field.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/io/printer.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[87 / 188][0m 2 actions running
+    Compiling src/google/protobuf/io/printer.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/io/gzip_stream.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[88 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/io/printer.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/generated_message_table_driven.cc
+[1A[K[1A[K[1A[K[32m[89 / 188][0m 2 actions running
+    Compiling src/google/protobuf/generated_message_table_driven.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_file.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[89 / 188][0m 2 actions running
+    Compiling src/google/protobuf/generated_message_table_driven.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_file.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[89 / 188][0m 2 actions running
+    Compiling src/google/protobuf/generated_message_table_driven.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_file.cc; 2s linux-sandbox
+[1A[K[1A[K[1A[K[32m[90 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/generated_message_table_driven.cc; 2s linux-sandbox
+    [Scann] Compiling src/google/protobuf/field_mask.pb.cc
+[1A[K[1A[K[1A[K[32m[91 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/field_mask.pb.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/extension_set_heavy.cc
+[1A[K[1A[K[1A[K[32m[91 / 188][0m 2 actions running
+    Compiling src/google/protobuf/field_mask.pb.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/extension_set_heavy.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[92 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/extension_set_heavy.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/empty.pb.cc
+[1A[K[1A[K[1A[K[32m[92 / 188][0m 2 actions running
+    Compiling src/google/protobuf/extension_set_heavy.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/empty.pb.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[93 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/empty.pb.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_extension_lite.cc
+[1A[K[1A[K[1A[K[32m[94 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_extension_lite.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_enum.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[95 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_enum.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/descriptor_database.cc
+[1A[K[1A[K[1A[K[32m[95 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_enum.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/descriptor_database.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[96 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/descriptor_database.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/descriptor.pb.cc
+[1A[K[1A[K[1A[K[32m[96 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor_database.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/descriptor.pb.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[96 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor_database.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/descriptor.pb.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[97 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/descriptor.pb.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/plugin.pb.cc
+[1A[K[1A[K[1A[K[32m[97 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.pb.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/plugin.pb.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[97 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.pb.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/plugin.pb.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[98 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/descriptor.pb.cc; 3s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/importer.cc
+[1A[K[1A[K[1A[K[32m[98 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.pb.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/importer.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[98 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.pb.cc; 4s linux-sandbox
+    Compiling src/google/protobuf/compiler/importer.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[99 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.pb.cc; 5s linux-sandbox
+    Compiling zutil.c; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[101 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_enum_field_lite.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/cpp/cpp_string_field.cc
+[1A[K[1A[K[1A[K[32m[101 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_enum_field_lite.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_string_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[101 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_enum_field_lite.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_string_field.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[102 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_string_field.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/any.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[103 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_string_field.cc; 2s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/cpp/cpp_extension.cc
+[1A[K[1A[K[1A[K[32m[104 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_extension.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_extension.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[104 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_extension.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_extension.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[105 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_extension.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/stubs/stringpiece.cc
+[1A[K[1A[K[1A[K[32m[106 / 188][0m 2 actions running
+    Compiling src/google/protobuf/stubs/stringpiece.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_service.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[107 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_service.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_doc_comment.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[108 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_service.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_enum.cc
+[1A[K[1A[K[1A[K[32m[108 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_service.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_enum.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[109 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_enum.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/message_lite.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[109 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_enum.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/message_lite.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[110 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_enum.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/message_differencer.cc
+[1A[K[1A[K[1A[K[32m[111 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/message_differencer.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_padding_optimizer.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[111 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/message_differencer.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_padding_optimizer.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[112 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/util/message_differencer.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/cpp/cpp_map_field.cc
+[1A[K[1A[K[1A[K[32m[112 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/message_differencer.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_map_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[112 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/message_differencer.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_map_field.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[113 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/util/message_differencer.cc; 3s linux-sandbox
+    [Scann] Compiling src/google/protobuf/implicit_weak_message.cc
+[1A[K[1A[K[1A[K[32m[114 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/implicit_weak_message.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/repeated_field.cc
+[1A[K[1A[K[1A[K[32m[114 / 188][0m 2 actions running
+    Compiling src/google/protobuf/implicit_weak_message.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/repeated_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[115 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/repeated_field.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/csharp/csharp_repeated_primitive_field.cc
+[1A[K[1A[K[1A[K[32m[115 / 188][0m 2 actions running
+    Compiling src/google/protobuf/repeated_field.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_repeated_primitive_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[116 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/repeated_field.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/io/zero_copy_stream_impl_lite.cc
+[1A[K[1A[K[1A[K[32m[116 / 188][0m 2 actions running
+    Compiling src/google/protobuf/repeated_field.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/io/zero_copy_stream_impl_lite.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[118 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/wrappers.pb.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/io/io_win32.cc
+[1A[K[1A[K[1A[K[32m[119 / 188][0m 2 actions running
+    Compiling src/google/protobuf/wrappers.pb.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_message.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[119 / 188][0m 2 actions running
+    Compiling src/google/protobuf/wrappers.pb.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_message.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[120 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_message.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/generated_message_util.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[120 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_message.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/generated_message_util.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[120 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_message.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/generated_message_util.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[121 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_message.cc; 3s linux-sandbox
+    [Scann] Compiling src/google/protobuf/generated_message_table_driven_lite.cc
+[1A[K[1A[K[1A[K[32m[121 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_message.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/generated_message_table_driven_lite.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[121 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_message.cc; 4s linux-sandbox
+    Compiling src/google/protobuf/generated_message_table_driven_lite.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[121 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_message.cc; 5s linux-sandbox
+    Compiling src/google/protobuf/generated_message_table_driven_lite.cc; 2s linux-sandbox
+[1A[K[1A[K[1A[K[32m[122 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_message.cc; 5s linux-sandbox
+    [Scann] Compiling src/google/protobuf/arena.cc
+[1A[K[1A[K[1A[K[32m[123 / 188][0m 2 actions running
+    Compiling src/google/protobuf/arena.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/any_lite.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[124 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/any_lite.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/type_resolver_util.cc
+[1A[K[1A[K[1A[K[32m[125 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/type_resolver_util.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/util/internal/type_info_test_helper.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[125 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/type_resolver_util.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/internal/type_info_test_helper.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[127 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/internal/json_objectwriter.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_generator.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[127 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/internal/json_objectwriter.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_generator.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[128 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_generator.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/internal/default_value_objectwriter.cc
+[1A[K[1A[K[1A[K[32m[128 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_generator.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/internal/default_value_objectwriter.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[129 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/util/internal/default_value_objectwriter.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/code_generator.cc
+[1A[K[1A[K[1A[K[32m[129 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/internal/default_value_objectwriter.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/code_generator.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[130 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/util/internal/default_value_objectwriter.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/delimited_message_util.cc
+[1A[K[1A[K[1A[K[32m[131 / 188][0m 2 actions running
+    Compiling src/google/protobuf/util/delimited_message_util.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_service.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[132 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_service.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/text_format.cc
+[1A[K[1A[K[1A[K[32m[132 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_service.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/text_format.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[132 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_service.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/text_format.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[133 / 188][0m 2 actions running
+    Compiling src/google/protobuf/text_format.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/internal/utility.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[133 / 188][0m 2 actions running
+    Compiling src/google/protobuf/text_format.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/util/internal/utility.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[134 / 188][0m 2 actions running
+    Compiling src/google/protobuf/text_format.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/service.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[135 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/text_format.cc; 3s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_message_lite.cc
+[1A[K[1A[K[1A[K[32m[135 / 188][0m 2 actions running
+    Compiling src/google/protobuf/text_format.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_message_lite.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[136 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_message_lite.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/io/tokenizer.cc
+[1A[K[1A[K[1A[K[32m[136 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_message_lite.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/io/tokenizer.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[137 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_message_lite.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_message_field.cc
+[1A[K[1A[K[1A[K[32m[137 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_message_lite.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_message_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[138 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_message_field.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/generated_message_reflection.cc
+[1A[K[1A[K[1A[K[32m[138 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_message_field.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/generated_message_reflection.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[139 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/generated_message_reflection.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_message_builder.cc
+[1A[K[1A[K[1A[K[32m[139 / 188][0m 2 actions running
+    Compiling src/google/protobuf/generated_message_reflection.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_message_builder.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[139 / 188][0m 2 actions running
+    Compiling src/google/protobuf/generated_message_reflection.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_message_builder.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[140 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/generated_message_reflection.cc; 3s linux-sandbox
+    [Scann] Compiling src/google/protobuf/dynamic_message.cc
+[1A[K[1A[K[1A[K[32m[141 / 188][0m 2 actions running
+    Compiling src/google/protobuf/dynamic_message.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/stubs/structurally_valid.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[142 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/dynamic_message.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/descriptor.cc
+[1A[K[1A[K[1A[K[32m[142 / 188][0m 2 actions running
+    Compiling src/google/protobuf/dynamic_message.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/descriptor.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[143 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/descriptor.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/util/internal/proto_writer.cc
+[1A[K[1A[K[1A[K[32m[143 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/internal/proto_writer.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[143 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/util/internal/proto_writer.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[144 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/descriptor.cc; 2s linux-sandbox
+    [Scann] Compiling src/google/protobuf/api.pb.cc
+[1A[K[1A[K[1A[K[32m[144 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/api.pb.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[144 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.cc; 4s linux-sandbox
+    Compiling src/google/protobuf/api.pb.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[145 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.cc; 4s linux-sandbox
+    Compiling src/google/protobuf/util/json_util.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[145 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.cc; 5s linux-sandbox
+    Compiling src/google/protobuf/util/json_util.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[146 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.cc; 5s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_doc_comment.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[146 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.cc; 6s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_doc_comment.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[147 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/descriptor.cc; 6s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_field.cc
+[1A[K[1A[K[1A[K[32m[147 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.cc; 6s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[147 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.cc; 7s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_field.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[148 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/descriptor.cc; 8s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/python/python_generator.cc
+[1A[K[1A[K[1A[K[32m[148 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.cc; 8s linux-sandbox
+    Compiling src/google/protobuf/compiler/python/python_generator.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[148 / 188][0m 2 actions running
+    Compiling src/google/protobuf/descriptor.cc; 9s linux-sandbox
+    Compiling src/google/protobuf/compiler/python/python_generator.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[149 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/python/python_generator.cc; 2s linux-sandbox
+    [Scann] Compiling src/google/protobuf/extension_set.cc
+[1A[K[1A[K[1A[K[32m[149 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/python/python_generator.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/extension_set.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[150 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/extension_set.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/stubs/common.cc
+[1A[K[1A[K[1A[K[32m[150 / 188][0m 2 actions running
+    Compiling src/google/protobuf/extension_set.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/stubs/common.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[151 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/extension_set.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/any.pb.cc
+[1A[K[1A[K[1A[K[32m[151 / 188][0m 2 actions running
+    Compiling src/google/protobuf/extension_set.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/any.pb.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[152 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/extension_set.cc; 2s linux-sandbox
+    [Scann] Compiling src/google/protobuf/io/zero_copy_stream.cc
+[1A[K[1A[K[1A[K[32m[153 / 188][0m 2 actions running
+    Compiling src/google/protobuf/io/zero_copy_stream.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/stubs/status.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[155 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_enum_field.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/util/time_util.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[156 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_enum_field.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/io/zero_copy_stream_impl.cc
+[1A[K[1A[K[1A[K[32m[156 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_enum_field.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/io/zero_copy_stream_impl.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[157 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_enum_field.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_name_resolver.cc
+[1A[K[1A[K[1A[K[32m[158 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_name_resolver.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_helpers.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[158 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_name_resolver.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_helpers.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[159 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_helpers.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/stubs/substitute.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[160 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_helpers.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/csharp/csharp_helpers.cc
+[1A[K[1A[K[1A[K[32m[160 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_helpers.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_helpers.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[160 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_helpers.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_helpers.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[161 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_helpers.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_map_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[161 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_helpers.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_map_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[162 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_map_field.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/cpp/cpp_file.cc
+[1A[K[1A[K[1A[K[32m[162 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_map_field.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/cpp/cpp_file.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[163 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_file.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/duration.pb.cc
+[1A[K[1A[K[1A[K[32m[163 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_file.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/duration.pb.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[164 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_file.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/csharp/csharp_enum.cc
+[1A[K[1A[K[1A[K[32m[164 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_file.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_enum.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[164 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_file.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/csharp/csharp_enum.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[165 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_file.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/zip_writer.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[165 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_file.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/zip_writer.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[166 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/cpp/cpp_file.cc; 3s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/ruby/ruby_generator.cc
+[1A[K[1A[K[1A[K[32m[166 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/cpp/cpp_file.cc; 4s linux-sandbox
+    Compiling src/google/protobuf/compiler/ruby/ruby_generator.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[167 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/ruby/ruby_generator.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/stubs/stringprintf.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[168 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/ruby/ruby_generator.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/stubs/statusor.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[169 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/ruby/ruby_generator.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/parse_context.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[170 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/parse_context.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/csharp/csharp_primitive_field.cc
+[1A[K[1A[K[1A[K[32m[171 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/csharp/csharp_primitive_field.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/io/coded_stream.cc
+[1A[K[1A[K[1A[K[32m[171 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/csharp/csharp_primitive_field.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/io/coded_stream.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[172 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/csharp/csharp_primitive_field.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/subprocess.cc
+[1A[K[1A[K[1A[K[32m[173 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/subprocess.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_helpers.cc
+[1A[K[1A[K[1A[K[32m[173 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/subprocess.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_helpers.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[174 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_helpers.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_primitive_field.cc
+[1A[K[1A[K[1A[K[32m[174 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_helpers.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_primitive_field.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[175 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_primitive_field.cc; 1s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_primitive_field_lite.cc
+[1A[K[1A[K[1A[K[32m[175 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_primitive_field.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_primitive_field_lite.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[176 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_primitive_field_lite.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_map_field_lite.cc
+[1A[K[1A[K[1A[K[32m[176 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_primitive_field_lite.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_map_field_lite.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[177 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_map_field_lite.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_enum_lite.cc
+[1A[K[1A[K[1A[K[32m[177 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_map_field_lite.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_enum_lite.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[178 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_enum_lite.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/parser.cc
+[1A[K[1A[K[1A[K[32m[178 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_enum_lite.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/compiler/parser.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[179 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/parser.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_message.cc
+[1A[K[1A[K[1A[K[32m[179 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/parser.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_message.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[179 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/parser.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_message.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[179 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/parser.cc; 3s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_message.cc; 2s linux-sandbox
+[1A[K[1A[K[1A[K[32m[180 / 188][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_message.cc; 2s linux-sandbox
+    Compiling src/google/protobuf/compiler/java/java_generator_factory.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[181 / 188][0m 2 actions, 1 running
+    Compiling src/google/protobuf/compiler/java/java_generator_factory.cc; 0s linux-sandbox
+    [Scann] Compiling src/google/protobuf/compiler/java/java_message_field_lite.cc
+[1A[K[1A[K[1A[K[32m[185 / 288][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_message_field_lite.cc; 0s linux-sandbox
+    Compiling src/google/protobuf/util/internal/utility.cc; 0s linux-sandbox
+[1A[K[1A[K[1A[K[32m[185 / 288][0m 2 actions running
+    Compiling src/google/protobuf/compiler/java/java_message_field_lite.cc; 1s linux-sandbox
+    Compiling src/google/protobuf/util/internal/utility.cc; 1s linux-sandbox
+[1A[K[1A[K[1A[K[32m[187 / 288][0m 2 actions, 1 running
+    Compiling src/google/protobuf/duration.pb.cc; 0s linux-sandbox
+    [Prepa] Linking external/com_google_protobuf/protoc
+[1A[K[1A[K[1A[K[32m[188 / 288][0m 2 actions, 1 running
+    Compiling src/google/protobuf/duration.pb.cc; 0s linux-sandbox
+    [Prepa] Generating C++ proto_library //wwtest:wwproto
+[1A[K[1A[K[1A[K[31m[1mERROR: [0m/home/azureuser/Cloud-Computing/protobuf/wwtest/BUILD:18:10: Compiling wwtest/main.cpp failed: (Exit 1): gcc failed: error executing command /usr/bin/gcc -U_FORTIFY_SOURCE -fstack-protector -Wall -Wunused-but-set-parameter -Wno-free-nonheap-object -fno-omit-frame-pointer '-std=c++0x' -MD -MF ... (remaining 36 argument(s) skipped)
+
+Use --sandbox_debug to see verbose messages from the sandbox
+[32m[190 / 288][0m Compiling src/google/protobuf/duration.pb.cc; 0s linux-sandbox
+[1A[Kwwtest/main.cpp:4:10: fatal error: example.pb.h: No such file or directory
+    4 | #include "example.pb.h"
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+[32m[190 / 288][0m Compiling src/google/protobuf/duration.pb.cc; 0s linux-sandbox
+[1A[KTarget //wwtest:main failed to build
+[32m[191 / 288][0m checking cached actions
+[1A[KUse --verbose_failures to see the command lines of failed build steps.
+[32m[191 / 288][0m checking cached actions
+[1A[K[32mINFO: [0mElapsed time: 157.930s, Critical Path: 10.49s
+[32m[191 / 288][0m checking cached actions
+[1A[K[32mINFO: [0m191 processes: 8 internal, 183 linux-sandbox.
+[32m[191 / 288][0m checking cached actions
+[1A[K[31m[1mFAILED:[0m Build did NOT complete successfully
+[1A[K[31m[1mFAILED:[0m Build did NOT complete successfully
+[0m

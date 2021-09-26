@@ -1,0 +1,136 @@
+210925 23:26:33.031:I 1 [com.google.devtools.build.lib.analysis.BlazeVersionInfo.logVersionInfo] Bazel version info: Build label: 4.2.1
+Build target: bazel-out/k8-opt/bin/src/main/java/com/google/devtools/build/lib/bazel/BazelServer_deploy.jar
+Build time: Mon Aug 30 15:17:47 2021 (1630336667)
+Build timestamp: 1630336667
+Build timestamp as int: 1630336667
+210925 23:26:33.220:I 1 [com.google.devtools.build.lib.runtime.BlazeRuntime.main] Starting Bazel server with pid 71280 and , args [--max_idle_secs=10800, --noshutdown_on_low_sys_mem, --connect_timeout_secs=30, --output_user_root=/home/azureuser/Cloud-Computing/protobuf/wwtest/., --install_base=/home/azureuser/Cloud-Computing/protobuf/wwtest/./install/ee8d7e4b6774884ed2cd0aece6fc9fda, --install_md5=ee8d7e4b6774884ed2cd0aece6fc9fda, --output_base=/home/azureuser/Cloud-Computing/protobuf/wwtest/e81ce4490cbd1fdb5be02df8f7507401, --workspace_directory=/home/azureuser/Cloud-Computing/protobuf, --default_system_javabase=/usr/lib/jvm/java-11-openjdk-amd64, --failure_detail_out=/home/azureuser/Cloud-Computing/protobuf/wwtest/e81ce4490cbd1fdb5be02df8f7507401/failure_detail.rawproto, --expand_configs_in_place, --idle_server_tasks, --write_command_log, --nowatchfs, --nofatal_event_bus_exceptions, --nowindows_enable_symlinks, --client_debug=false, --product_name=Bazel, --noincompatible_enable_execution_transition, --option_sources=output_Uuser_Uroot:]
+210925 23:26:34.036:I 16 [com.google.devtools.build.lib.server.CommandManager.create] Starting command f7af510e-093f-4cfe-8893-5dc982df8ba4 on thread grpc-default-worker-ELG-3-1
+210925 23:26:34.040:I 16 [com.google.devtools.build.lib.server.CommandManager$RunningCommand.close] Finished command f7af510e-093f-4cfe-8893-5dc982df8ba4 on thread grpc-default-worker-ELG-3-1
+210925 23:26:34.052:I 18 [com.google.devtools.build.lib.server.CommandManager.create] Starting command 854c0b01-6055-4523-9b75-fd226510a86b on thread grpc-command-0
+210925 23:26:34.060:I 18 [com.google.devtools.build.lib.server.GrpcServerImpl.executeCommand] [build, --startup_time=12284, --command_wait_time=0, --restart_reason=no_daemon, --binary_path=/usr/bin/bazel, --rc_source=client, --default_override=0:common=--isatty=1, --default_override=0:common=--terminal_columns=184, --rc_source=/etc/bazel.bazelrc, --client_env=SHELL=/bin/bash, --client_env=PWD=/home/azureuser/Cloud-Computing/protobuf/wwtest, --client_env=LOGNAME=azureuser, --client_env=XDG_SESSION_TYPE=tty, --client_env=MOTD_SHOWN=pam, --client_env=HOME=/home/azureuser, --client_env=LANG=C.UTF-8, --client_env=LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:, --client_env=SSH_CONNECTION=129.59.122.77 14096 10.1.0.4 22, --client_env=SGX_AESM_ADDR=1, --client_env=LESSCLOSE=/usr/bin/lesspipe %s %s, --client_env=XDG_SESSION_CLASS=user, --client_env=TERM=xterm-256color, --client_env=LESSOPEN=| /usr/bin/lesspipe %s, --client_env=USER=azureuser, --client_env=SHLVL=1, --client_env=XDG_SESSION_ID=1, --client_env=XDG_RUNTIME_DIR=/run/user/1000, --client_env=SSH_CLIENT=129.59.122.77 14096 22, --client_env=XDG_DATA_DIRS=/usr/local/share:/usr/share:/var/lib/snapd/desktop, --client_env=PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin, --client_env=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus, --client_env=SSH_TTY=/dev/pts/0, --client_env=OLDPWD=/home/azureuser/Cloud-Computing/protobuf/bazel-bin/wwtest, --client_cwd=/home/azureuser/Cloud-Computing/protobuf/wwtest, :main]
+210925 23:26:34.114:I 18 [com.google.devtools.build.lib.actions.LocalHostCapacity.getNewLocalHostCapacity] Determined local resources: RAM=3935MB, CPU=2.0
+210925 23:26:34.407:I 18 [com.google.devtools.build.lib.metrics.PostGCMemoryUseRecorder.<init>] Listening for notifications from GC: G1 Young Generation
+210925 23:26:34.408:I 18 [com.google.devtools.build.lib.metrics.PostGCMemoryUseRecorder.<init>] Listening for notifications from GC: G1 Old Generation
+210925 23:26:34.422:I 18 [com.google.devtools.build.lib.util.DebugLoggerConfigurator.setupLogging] Log level: INFO
+210925 23:26:34.536:I 18 [com.google.devtools.build.lib.skyframe.DiffAwarenessManager.maybeGetDiffAwarenessState] Using local DiffAwareness strategy for /home/azureuser/Cloud-Computing/protobuf
+210925 23:26:34.536:I 18 [com.google.devtools.build.lib.skyframe.DiffAwarenessManager.getDiff] Initial baseline view for /home/azureuser/Cloud-Computing/protobuf is SequentialView[owner=null, position=-2, modifiedAbsolutePaths=[]]
+210925 23:26:34.538:I 18 [com.google.devtools.build.lib.skyframe.SequencedSkyframeExecutor.handleDiffsWithMissingDiffInformation] About to scan skyframe graph checking for filesystem nodes of types [EXTERNAL, OUTPUT, EXTERNAL_REPO, EXTERNAL_IN_MANAGED_DIRECTORY]
+210925 23:26:34.545:I 18 [com.google.devtools.build.lib.skyframe.FilesystemValueChecker.lambda$getDirtyValues$2] Spent 5273978 nanoseconds checking 2 filesystem nodes (20 scanned)
+210925 23:26:34.546:I 18 [com.google.devtools.build.lib.skyframe.SequencedSkyframeExecutor.logDiffInfo] DiffAwareness found 0 modified source files and directory listings for /home/azureuser/Cloud-Computing/protobuf
+210925 23:26:34.610:I 18 [com.google.devtools.build.lib.buildtool.BuildTool.buildTargets] Build identifier: 0245d092-f286-42bf-a394-10d88ba687f5
+210925 23:26:36.929:I 18 [com.google.devtools.build.lib.analysis.BuildView.update] Starting analysis
+210925 23:26:39.259:I 18 [com.google.devtools.build.lib.analysis.BuildView.update] Finished analysis
+210925 23:26:39.292:I 18 [com.google.devtools.build.lib.runtime.CacheFileDigestsModule.executorInit] Reconfiguring cache with size=50000
+210925 23:26:39.295:I 18 [com.google.devtools.build.lib.runtime.CacheFileDigestsModule.logStats] Accumulated cache stats before command: hit count=0, miss count=0, hit rate=1.00000, eviction count=0
+210925 23:26:39.313:I 18 [com.google.devtools.build.lib.buildtool.SymlinkForest.plantSymlinkForest] Planted symlink forest in /home/azureuser/Cloud-Computing/protobuf/wwtest/e81ce4490cbd1fdb5be02df8f7507401/execroot/__main__
+210925 23:26:39.322:I 18 [com.google.devtools.build.lib.runtime.BlazeWorkspace.getPersistentActionCache] Spent 2 milliseconds doing Loading action cache
+210925 23:26:39.328:I 18 [com.google.devtools.build.lib.skyframe.FilesystemValueChecker.getDirtyActionValues] Accumulating dirty actions
+210925 23:26:39.330:I 18 [com.google.devtools.build.lib.skyframe.FilesystemValueChecker.getDirtyActionValues] Sharded action values for batching
+210925 23:26:39.330:I 18 [com.google.devtools.build.lib.skyframe.FilesystemValueChecker.getDirtyActionValues] Completed output file stat checks
+210925 23:26:39.331:I 18 [com.google.devtools.build.lib.skyframe.SequencedSkyframeExecutor.detectModifiedOutputFiles] Found 0 modified files from last build
+210925 23:28:59.660:WT 84 [com.google.devtools.build.skyframe.AbstractParallelEvaluator$Evaluate.run] Aborting evaluation while evaluating ActionLookupData{actionLookupKey=ConfiguredTargetKey{label=//wwtest:main, config=BuildConfigurationValue.Key[96d6638d77e294d5ea45abfa4bdf12d435d0d7fb38e15d839ac9c6ef83541e29]}, actionIndex=1}
+com.google.devtools.build.lib.skyframe.ActionExecutionFunction$ActionExecutionFunctionException: com.google.devtools.build.lib.actions.AlreadyReportedActionExecutionException: (Exit 1): gcc failed: error executing command /usr/bin/gcc -U_FORTIFY_SOURCE -fstack-protector -Wall -Wunused-but-set-parameter -Wno-free-nonheap-object -fno-omit-frame-pointer '-std=c++0x' -MD -MF ... (remaining 36 argument(s) skipped)
+
+Use --sandbox_debug to see verbose messages from the sandbox
+	at com.google.devtools.build.lib.skyframe.ActionExecutionFunction.compute(ActionExecutionFunction.java:326)
+	at com.google.devtools.build.skyframe.AbstractParallelEvaluator$Evaluate.run(AbstractParallelEvaluator.java:477)
+	at com.google.devtools.build.lib.concurrent.AbstractQueueVisitor$WrappedRunnable.run(AbstractQueueVisitor.java:398)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: com.google.devtools.build.lib.actions.AlreadyReportedActionExecutionException: (Exit 1): gcc failed: error executing command /usr/bin/gcc -U_FORTIFY_SOURCE -fstack-protector -Wall -Wunused-but-set-parameter -Wno-free-nonheap-object -fno-omit-frame-pointer '-std=c++0x' -MD -MF ... (remaining 36 argument(s) skipped)
+
+Use --sandbox_debug to see verbose messages from the sandbox
+	... 6 more
+Caused by: com.google.devtools.build.lib.exec.SpawnExecException: gcc failed: error executing command /usr/bin/gcc -U_FORTIFY_SOURCE -fstack-protector -Wall -Wunused-but-set-parameter -Wno-free-nonheap-object -fno-omit-frame-pointer '-std=c++0x' -MD -MF ... (remaining 36 argument(s) skipped)
+
+Use --sandbox_debug to see verbose messages from the sandbox
+	at com.google.devtools.build.lib.exec.AbstractSpawnStrategy.exec(AbstractSpawnStrategy.java:199)
+	at com.google.devtools.build.lib.exec.AbstractSpawnStrategy.exec(AbstractSpawnStrategy.java:106)
+	at com.google.devtools.build.lib.actions.SpawnStrategy.beginExecution(SpawnStrategy.java:47)
+	at com.google.devtools.build.lib.exec.SpawnStrategyResolver.beginExecution(SpawnStrategyResolver.java:65)
+	at com.google.devtools.build.lib.rules.cpp.CppCompileAction.beginExecution(CppCompileAction.java:1451)
+	at com.google.devtools.build.lib.actions.Action.execute(Action.java:127)
+	at com.google.devtools.build.lib.skyframe.SkyframeActionExecutor$5.execute(SkyframeActionExecutor.java:855)
+	at com.google.devtools.build.lib.skyframe.SkyframeActionExecutor$ActionRunner.continueAction(SkyframeActionExecutor.java:1016)
+	at com.google.devtools.build.lib.skyframe.SkyframeActionExecutor$ActionRunner.run(SkyframeActionExecutor.java:975)
+	at com.google.devtools.build.lib.skyframe.ActionExecutionState.runStateMachine(ActionExecutionState.java:129)
+	at com.google.devtools.build.lib.skyframe.ActionExecutionState.getResultOrDependOnFuture(ActionExecutionState.java:81)
+	at com.google.devtools.build.lib.skyframe.SkyframeActionExecutor.executeAction(SkyframeActionExecutor.java:472)
+	at com.google.devtools.build.lib.skyframe.ActionExecutionFunction.checkCacheAndExecuteIfNeeded(ActionExecutionFunction.java:834)
+	at com.google.devtools.build.lib.skyframe.ActionExecutionFunction.compute(ActionExecutionFunction.java:307)
+	... 5 more
+210925 23:28:59.699:I 18 [com.google.devtools.build.lib.buildtool.ExecutionTool.saveActionCache] Spent 2 milliseconds doing Saving action cache
+210925 23:28:59.733:I 18 [com.google.devtools.build.lib.runtime.BuildSummaryStatsModule.buildComplete] Critical Path: 10.49s, Remote (0.00% of the time): [parse: 0.00%, queue: 0.00%, network: 0.00%, upload: 0.00%, setup: 0.00%, process: 0.00%, fetch: 0.00%, retry: 0.00%, processOutputs: 0.00%, other: 0.00%, input files: 0, input bytes: 0, memory bytes: 0]
+  0.07s action 'Compiling wwtest/main.cpp'
+  0.00s BazelCppSemantics_build_arch_k8-fastbuild for //wwtest:main
+  0.00s BazelCppSemantics_build_arch_k8-fastbuild for //wwtest:wwproto
+  0.01s action 'Generating C++ proto_library //wwtest:wwproto'
+  0.00s runfiles for @com_google_protobuf//:protoc
+  0.21s action 'Linking external/com_google_protobuf/protoc'
+  10.14s action 'Compiling src/google/protobuf/descriptor.cc'
+  0.00s BazelCppSemantics_build_arch_k8-opt-exec-2B5CBBC6 for @com_google_protobuf//:protobuf
+  0.00s BazelCppSemantics_build_arch_k8-opt-exec-2B5CBBC6 for @zlib//:zlib
+  0.05s action 'Executing genrule @zlib//:copy_public_headers'
+210925 23:28:59.734:I 18 [com.google.devtools.build.lib.runtime.BuildSummaryStatsModule.buildComplete] Slowest actions:
+  10.14s action 'Compiling src/google/protobuf/descriptor.cc'
+  6.50s action 'Compiling src/google/protobuf/compiler/js/js_generator.cc'
+  6.02s action 'Compiling src/google/protobuf/compiler/cpp/cpp_message.cc'
+  5.41s action 'Compiling src/google/protobuf/descriptor.pb.cc'
+  4.38s action 'Compiling src/google/protobuf/compiler/command_line_interface.cc'
+  4.33s action 'Compiling src/google/protobuf/compiler/cpp/cpp_file.cc'
+  4.06s action 'Compiling src/google/protobuf/text_format.cc'
+  4.05s action 'Compiling src/google/protobuf/compiler/cpp/cpp_helpers.cc'
+  3.96s action 'Compiling src/google/protobuf/util/message_differencer.cc'
+  3.89s action 'Compiling src/google/protobuf/compiler/php/php_generator.cc'
+  3.43s action 'Compiling src/google/protobuf/generated_message_reflection.cc'
+  3.37s action 'Compiling src/google/protobuf/wire_format.cc'
+  3.26s action 'Compiling src/google/protobuf/compiler/parser.cc'
+  3.20s action 'Compiling src/google/protobuf/compiler/java/java_message.cc'
+  3.18s action 'Compiling src/google/protobuf/descriptor_database.cc'
+  3.03s action 'Compiling src/google/protobuf/compiler/python/python_generator.cc'
+  3.01s action 'Compiling src/google/protobuf/compiler/objectivec/objectivec_helpers.cc'
+  2.86s action 'Compiling src/google/protobuf/generated_message_table_driven_lite.cc'
+  2.86s action 'Compiling src/google/protobuf/generated_message_table_driven.cc'
+  2.75s action 'Compiling src/google/protobuf/extension_set.cc'
+  2.69s action 'Compiling src/google/protobuf/struct.pb.cc'
+  2.55s action 'Compiling src/google/protobuf/compiler/objectivec/objectivec_message.cc'
+  2.48s action 'Compiling src/google/protobuf/compiler/java/java_file.cc'
+  2.40s action 'Compiling src/google/protobuf/map_field.cc'
+  2.39s action 'Compiling src/google/protobuf/compiler/cpp/cpp_enum.cc'
+  2.36s action 'Compiling src/google/protobuf/compiler/cpp/cpp_string_field.cc'
+  2.30s action 'Compiling src/google/protobuf/compiler/cpp/cpp_message_field.cc'
+  2.29s action 'Compiling src/google/protobuf/compiler/java/java_message_lite.cc'
+  2.26s action 'Compiling src/google/protobuf/compiler/java/java_message_builder.cc'
+  2.23s action 'Compiling src/google/protobuf/compiler/csharp/csharp_message.cc'
+210925 23:28:59.769:I 18 [com.google.devtools.build.lib.packages.metrics.ExtremaPackageMetricsRecorder.logIfNonEmpty] Slowest packages (ms): @com_google_protobuf// (86), @bazel_tools//tools/jdk (62), @bazel_tools//tools/cpp (27), wwtest (15), @bazel_tools//tools/python (11), @local_config_sh// (7), @platforms//cpu (3), @platforms//os (2), @bazel_tools//tools/build_defs/cc/whitelists/parse_headers_and_layering_check (2), @local_config_cc// (2)
+210925 23:28:59.770:I 18 [com.google.devtools.build.lib.packages.metrics.ExtremaPackageMetricsRecorder.logIfNonEmpty] Largest packages (num targets): @com_google_protobuf// (1263), @bazel_tools//tools/jdk (102), @bazel_tools//tools/cpp (82), external (45), @zlib// (40), @bazel_tools//tools/python (35), @platforms//cpu (24), @bazel_tools//src/conditions (17), @platforms//os (17), @local_config_cc// (12)
+210925 23:28:59.770:I 18 [com.google.devtools.build.lib.packages.metrics.ExtremaPackageMetricsRecorder.logIfNonEmpty] Packages with most computation steps: @com_google_protobuf// (12380), @bazel_tools//tools/jdk (2249), @bazel_tools//tools/cpp (730), @bazel_tools//tools/python (391), @local_config_cc// (234), @bazel_tools//src/conditions (140), @platforms//cpu (127), @zlib// (119), @platforms//os (92), wwtest (78)
+210925 23:28:59.772:I 18 [com.google.devtools.build.lib.packages.metrics.ExtremaPackageMetricsRecorder.logIfNonEmpty] Packages with most transitive loads (num bzl files): @com_google_protobuf// (24), @bazel_tools//tools/cpp (13), @bazel_tools//tools/jdk (11), @local_config_cc// (10), wwtest (9), @zlib// (6), @bazel_tools//tools/python (5), @local_config_cc_toolchains// (1), @local_config_platform// (1), @local_config_sh// (1)
+210925 23:28:59.774:I 18 [com.google.devtools.build.lib.runtime.CacheFileDigestsModule.logStats] Accumulated cache stats after command: hit count=0, miss count=813, hit rate=0.00000, eviction count=0
+210925 23:28:59.774:I 18 [com.google.devtools.build.lib.runtime.CacheFileDigestsModule.logStats] Cache stats for finished command: hit count=0, miss count=813, hit rate=0.00000, eviction count=0
+210925 23:28:59.775:I 18 [com.google.devtools.build.lib.runtime.BlazeCommandDispatcher.exec] Exit status was DetailedExitCode{exitCode=BUILD_FAILURE, failureDetail=message: "gcc failed: error executing command /usr/bin/gcc -U_FORTIFY_SOURCE -fstack-protector -Wall -Wunused-but-set-parameter -Wno-free-nonheap-object -fno-omit-frame-pointer \'-std=c++0x\' -MD -MF ... (remaining 36 argument(s) skipped)\n\nUse --sandbox_debug to see verbose messages from the sandbox"
+spawn {
+  code: NON_ZERO_EXIT
+  spawn_exit_code: 1
+}
+}
+210925 23:28:59.778:I 18 [com.google.devtools.build.lib.server.CommandManager$RunningCommand.close] Finished command 854c0b01-6055-4523-9b75-fd226510a86b on thread grpc-command-0
+210925 23:29:09.842:I 88 [com.google.devtools.build.lib.server.IdleServerTasks.lambda$idle$0] Spent 63 milliseconds doing Idle GC
+210925 23:29:09.843:I 88 [com.google.devtools.build.lib.server.IdleServerTasks.lambda$idle$0] [Idle GC] used: 36MB -> 28MB, committed: 126MB -> 98MB
+210925 23:29:09.843:I 9 [com.google.devtools.build.lib.metrics.PostGCMemoryUseRecorder.doHandleNotification] Memory use after full GC: 117310888
+210926 02:29:00.089:I 15 [com.google.devtools.build.lib.server.ServerWatcherRunnable.run] About to shutdown due to idleness
+210926 02:29:00.091:WT 1 [com.google.devtools.build.lib.sandbox.SandboxModule.cleanupSandboxBaseTop] Failed to clean up sandbox base /home/azureuser/Cloud-Computing/protobuf/wwtest/e81ce4490cbd1fdb5be02df8f7507401/sandbox
+java.io.FileNotFoundException: /home/azureuser/Cloud-Computing/protobuf/wwtest/e81ce4490cbd1fdb5be02df8f7507401/sandbox (No such file or directory)
+	at com.google.devtools.build.lib.unix.NativePosixFiles.readdir(Native Method)
+	at com.google.devtools.build.lib.unix.NativePosixFiles.readdir(NativePosixFiles.java:282)
+	at com.google.devtools.build.lib.unix.NativePosixFiles.readdir(NativePosixFiles.java:177)
+	at com.google.devtools.build.lib.unix.UnixFileSystem.getDirectoryEntries(UnixFileSystem.java:115)
+	at com.google.devtools.build.lib.vfs.Path.getDirectoryEntries(Path.java:366)
+	at com.google.devtools.build.lib.sandbox.SandboxModule.cleanupSandboxBaseTop(SandboxModule.java:594)
+	at com.google.devtools.build.lib.sandbox.SandboxModule.commonShutdown(SandboxModule.java:665)
+	at com.google.devtools.build.lib.sandbox.SandboxModule.blazeShutdown(SandboxModule.java:671)
+	at com.google.devtools.build.lib.runtime.BlazeRuntime.shutdown(BlazeRuntime.java:720)
+	at com.google.devtools.build.lib.runtime.BlazeRuntime.serverMain(BlazeRuntime.java:1047)
+	at com.google.devtools.build.lib.runtime.BlazeRuntime.main(BlazeRuntime.java:768)
+	at com.google.devtools.build.lib.bazel.Bazel.main(Bazel.java:85)

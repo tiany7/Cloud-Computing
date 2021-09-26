@@ -1,0 +1,9 @@
+44f3d92dcf91c6724c773a79db0612a092504c44e4051c0150fe6ed9cdce3334
+FILE:@bazel_tools//tools/osx/crosstool:BUILD.toolchains 93dacedd419d62d4b7549228292b4dc15c272bbd30c2cda801bfc542c1b8799b
+ENV:BAZEL_USE_CPP_ONLY_TOOLCHAIN \0
+STARLARK_SEMANTICS 0
+$MANAGED 
+FILE:@bazel_tools//tools/osx/crosstool:osx_archs.bzl 830ca282657481265d4f5e6eccfdda1ac96002c391ec42504f9309e32161d69d
+FILE:@bazel_tools//tools/osx:xcode_locator.m 4a8650494707b15ce002b7f4427f6e88ecbe77a6bf510a08ba909357ed5211c2
+ENV:BAZEL_DO_NOT_DETECT_CPP_TOOLCHAIN \0
+FILE:@bazel_tools//tools/cpp:BUILD.toolchains.tpl c03582c3c9093f54c032e3875c16e99eb7bb3800b8145ac34c21d1e233a0dd15

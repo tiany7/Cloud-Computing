@@ -1,0 +1,5 @@
+15626fd97bb0b2d706df0c2ccc2ffae6c9bd86f89e329322fbd7a0a1be992acb
+STARLARK_SEMANTICS 0
+$MANAGED 
+ENV:WINDIR \0
+ENV:PATH /usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
