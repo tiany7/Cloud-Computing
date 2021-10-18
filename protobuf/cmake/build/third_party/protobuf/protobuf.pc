@@ -1,0 +1,11 @@
+prefix=/home/azureuser/.local
+exec_prefix=/home/azureuser/.local
+libdir=/home/azureuser/.local/lib
+includedir=/home/azureuser/.local/include
+
+Name: Protocol Buffers
+Description: Google's Data Interchange Format
+Version: 3.17.3.0
+Libs: -L${libdir} -lprotobuf -lpthread
+Cflags: -I${includedir}
+Conflicts: protobuf-lite

@@ -1,0 +1,13 @@
+prefix=/home/azureuser/.local
+exec_prefix=/home/azureuser/.local
+libdir=/home/azureuser/.local/lib
+sharedlibdir=/home/azureuser/.local/lib
+includedir=/home/azureuser/.local/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.11
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

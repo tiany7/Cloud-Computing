@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/minigzip64.dir/test/minigzip.o -o minigzip64  -Wl,-rpath,/home/azureuser/Cloud-Computing/protobuf/cmake/build/third_party/zlib libz.so.1.2.11 

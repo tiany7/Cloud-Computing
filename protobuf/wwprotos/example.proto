@@ -1,8 +1,20 @@
 
-syntax = "proto2";
+syntax = "proto3";
+package wwadd;
 message Content
 {
-  optional int32  id = 1;
-  repeated string str = 2;
-  optional int32  opt = 3;
+  int32  id = 1;
+  string str = 2;
+  int32  opt = 3;
+}
+
+message AddReq{
+  int32 a = 1;
+  int32 b = 2;
+}
+message AddRsp{
+  int32 result = 1;
+}
+service Adder{
+  rpc add(AddReq) returns(AddRsp);
 }

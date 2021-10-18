@@ -1,0 +1,880 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bb8b5/fast && /usr/bin/make  -f CMakeFiles/cmTC_bb8b5.dir/build.make CMakeFiles/cmTC_bb8b5.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bb8b5.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIE -o CMakeFiles/cmTC_bb8b5.dir/src.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_bb8b5
+/home/azureuser/.local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb8b5.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_bb8b5.dir/src.c.o -o cmTC_bb8b5 
+/usr/bin/ld: CMakeFiles/cmTC_bb8b5.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_bb8b5.dir/build.make:106: cmTC_bb8b5] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_bb8b5/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0daef/fast && /usr/bin/make  -f CMakeFiles/cmTC_0daef.dir/build.make CMakeFiles/cmTC_0daef.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0daef.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -fPIE -o CMakeFiles/cmTC_0daef.dir/CheckFunctionExists.c.o -c /home/azureuser/.local/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_0daef
+/home/azureuser/.local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0daef.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_0daef.dir/CheckFunctionExists.c.o -o cmTC_0daef  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_0daef.dir/build.make:106: cmTC_0daef] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_0daef/fast] Error 2
+
+
+
+Determining if the function res_servicename exists in the resolv failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e06aa/fast && /usr/bin/make  -f CMakeFiles/cmTC_e06aa.dir/build.make CMakeFiles/cmTC_e06aa.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e06aa.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=res_servicename -fPIE -o CMakeFiles/cmTC_e06aa.dir/CheckFunctionExists.c.o -c /home/azureuser/.local/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e06aa
+/home/azureuser/.local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e06aa.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=res_servicename CMakeFiles/cmTC_e06aa.dir/CheckFunctionExists.c.o -o cmTC_e06aa  -lresolv 
+/usr/bin/ld: CMakeFiles/cmTC_e06aa.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `res_servicename'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e06aa.dir/build.make:106: cmTC_e06aa] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_e06aa/fast] Error 2
+
+
+
+Determining if the function gethostbyname exists in the socket failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e1998/fast && /usr/bin/make  -f CMakeFiles/cmTC_e1998.dir/build.make CMakeFiles/cmTC_e1998.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e1998.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -fPIE -o CMakeFiles/cmTC_e1998.dir/CheckFunctionExists.c.o -c /home/azureuser/.local/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e1998
+/home/azureuser/.local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1998.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_e1998.dir/CheckFunctionExists.c.o -o cmTC_e1998  -lsocket 
+/usr/bin/ld: cannot find -lsocket
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e1998.dir/build.make:106: cmTC_e1998] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_e1998/fast] Error 2
+
+
+
+Determining if the function socket exists in the socket failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4fde1/fast && /usr/bin/make  -f CMakeFiles/cmTC_4fde1.dir/build.make CMakeFiles/cmTC_4fde1.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4fde1.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=socket -fPIE -o CMakeFiles/cmTC_4fde1.dir/CheckFunctionExists.c.o -c /home/azureuser/.local/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4fde1
+/home/azureuser/.local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4fde1.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=socket CMakeFiles/cmTC_4fde1.dir/CheckFunctionExists.c.o -o cmTC_4fde1  -lsocket 
+/usr/bin/ld: cannot find -lsocket
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_4fde1.dir/build.make:106: cmTC_4fde1] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_4fde1/fast] Error 2
+
+
+
+Determining if files socket.h exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c8db7/fast && /usr/bin/make  -f CMakeFiles/cmTC_c8db7.dir/build.make CMakeFiles/cmTC_c8db7.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c8db7.dir/HAVE_SOCKET_H.c.o
+/usr/bin/cc   -fPIE -o CMakeFiles/cmTC_c8db7.dir/HAVE_SOCKET_H.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CheckIncludeFiles/HAVE_SOCKET_H.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CheckIncludeFiles/HAVE_SOCKET_H.c:2:10: fatal error: socket.h: No such file or directory
+    2 | #include <socket.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_c8db7.dir/build.make:85: CMakeFiles/cmTC_c8db7.dir/HAVE_SOCKET_H.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_c8db7/fast] Error 2
+
+
+Source:
+/* */
+#include <socket.h>
+
+
+int main(void){return 0;}
+
+Determining if files stropts.h exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_37c50/fast && /usr/bin/make  -f CMakeFiles/cmTC_37c50.dir/build.make CMakeFiles/cmTC_37c50.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_37c50.dir/HAVE_STROPTS_H.c.o
+/usr/bin/cc   -fPIE -o CMakeFiles/cmTC_37c50.dir/HAVE_STROPTS_H.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CheckIncludeFiles/HAVE_STROPTS_H.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CheckIncludeFiles/HAVE_STROPTS_H.c:2:10: fatal error: stropts.h: No such file or directory
+    2 | #include <stropts.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_37c50.dir/build.make:85: CMakeFiles/cmTC_37c50.dir/HAVE_STROPTS_H.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_37c50/fast] Error 2
+
+
+Source:
+/* */
+#include <stropts.h>
+
+
+int main(void){return 0;}
+
+Determining if files winsock2.h;windows.h exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d2a3a/fast && /usr/bin/make  -f CMakeFiles/cmTC_d2a3a.dir/build.make CMakeFiles/cmTC_d2a3a.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d2a3a.dir/HAVE_WINSOCK2_H.c.o
+/usr/bin/cc   -fPIE -o CMakeFiles/cmTC_d2a3a.dir/HAVE_WINSOCK2_H.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CheckIncludeFiles/HAVE_WINSOCK2_H.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CheckIncludeFiles/HAVE_WINSOCK2_H.c:2:10: fatal error: winsock2.h: No such file or directory
+    2 | #include <winsock2.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_d2a3a.dir/build.make:85: CMakeFiles/cmTC_d2a3a.dir/HAVE_WINSOCK2_H.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_d2a3a/fast] Error 2
+
+
+Source:
+/* */
+#include <winsock2.h>
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Determining if files winsock2.h;ws2tcpip.h;windows.h exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3ef34/fast && /usr/bin/make  -f CMakeFiles/cmTC_3ef34.dir/build.make CMakeFiles/cmTC_3ef34.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3ef34.dir/HAVE_WS2TCPIP_H.c.o
+/usr/bin/cc   -fPIE -o CMakeFiles/cmTC_3ef34.dir/HAVE_WS2TCPIP_H.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CheckIncludeFiles/HAVE_WS2TCPIP_H.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CheckIncludeFiles/HAVE_WS2TCPIP_H.c:2:10: fatal error: winsock2.h: No such file or directory
+    2 | #include <winsock2.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_3ef34.dir/build.make:85: CMakeFiles/cmTC_3ef34.dir/HAVE_WS2TCPIP_H.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_3ef34/fast] Error 2
+
+
+Source:
+/* */
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Determining if files winsock.h;windows.h exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_17411/fast && /usr/bin/make  -f CMakeFiles/cmTC_17411.dir/build.make CMakeFiles/cmTC_17411.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_17411.dir/HAVE_WINSOCK_H.c.o
+/usr/bin/cc   -fPIE -o CMakeFiles/cmTC_17411.dir/HAVE_WINSOCK_H.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CheckIncludeFiles/HAVE_WINSOCK_H.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CheckIncludeFiles/HAVE_WINSOCK_H.c:2:10: fatal error: winsock.h: No such file or directory
+    2 | #include <winsock.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_17411.dir/build.make:85: CMakeFiles/cmTC_17411.dir/HAVE_WINSOCK_H.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_17411/fast] Error 2
+
+
+Source:
+/* */
+#include <winsock.h>
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cfaa5/fast && /usr/bin/make  -f CMakeFiles/cmTC_cfaa5.dir/build.make CMakeFiles/cmTC_cfaa5.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cfaa5.dir/HAVE_WINDOWS_H.c.o
+/usr/bin/cc   -fPIE -o CMakeFiles/cmTC_cfaa5.dir/HAVE_WINDOWS_H.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CheckIncludeFiles/HAVE_WINDOWS_H.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CheckIncludeFiles/HAVE_WINDOWS_H.c:2:10: fatal error: windows.h: No such file or directory
+    2 | #include <windows.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_cfaa5.dir/build.make:85: CMakeFiles/cmTC_cfaa5.dir/HAVE_WINDOWS_H.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_cfaa5/fast] Error 2
+
+
+Source:
+/* */
+#include <windows.h>
+
+
+int main(void){return 0;}
+
+Performing C SOURCE FILE Test HAVE_TYPE_SOCKET failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_71899/fast && /usr/bin/make  -f CMakeFiles/cmTC_71899.dir/build.make CMakeFiles/cmTC_71899.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_71899.dir/src.c.o
+/usr/bin/cc -DHAVE_TYPE_SOCKET -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE -o CMakeFiles/cmTC_71899.dir/src.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/src.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/src.c:26:4: error: unknown type name ‘SOCKET’
+   26 |    SOCKET var_exists;
+      |    ^~~~~~
+make[1]: *** [CMakeFiles/cmTC_71899.dir/build.make:85: CMakeFiles/cmTC_71899.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_71899/fast] Error 2
+
+
+Source file was:
+
+		#include <stdio.h>
+		#include <stdlib.h>
+	
+		#include <stdbool.h>
+		#include <sys/types.h>
+		#include <arpa/inet.h>
+		#include <arpa/nameser.h>
+		#include <netdb.h>
+		#include <net/if.h>
+		#include <netinet/in.h>
+		#include <netinet/tcp.h>
+		#include <signal.h>
+		#include <stdlib.h>
+		#include <string.h>
+		#include <strings.h>
+		#include <sys/ioctl.h>
+		#include <sys/select.h>
+		#include <sys/socket.h>
+		#include <sys/time.h>
+		#include <sys/uio.h>
+		#include <time.h>
+		#include <fcntl.h>
+		#include <unistd.h>
+		int main() {
+			SOCKET var_exists;
+			(void)var_exists;
+			return 0;
+		}
+	
+Determining if the SO_NONBLOCK exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8d363/fast && /usr/bin/make  -f CMakeFiles/cmTC_8d363.dir/build.make CMakeFiles/cmTC_8d363.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8d363.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE -o CMakeFiles/cmTC_8d363.dir/CheckSymbolExists.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘SO_NONBLOCK’ undeclared (first use in this function); did you mean ‘O_NONBLOCK’?
+   27 |   return ((int*)(&SO_NONBLOCK))[argc];
+      |                   ^~~~~~~~~~~
+      |                   O_NONBLOCK
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_8d363.dir/build.make:85: CMakeFiles/cmTC_8d363.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_8d363/fast] Error 2
+
+
+File /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef SO_NONBLOCK
+  return ((int*)(&SO_NONBLOCK))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the bitncmp exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_361a0/fast && /usr/bin/make  -f CMakeFiles/cmTC_361a0.dir/build.make CMakeFiles/cmTC_361a0.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_361a0.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE -o CMakeFiles/cmTC_361a0.dir/CheckSymbolExists.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘bitncmp’ undeclared (first use in this function); did you mean ‘bcmp’?
+   27 |   return ((int*)(&bitncmp))[argc];
+      |                   ^~~~~~~
+      |                   bcmp
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_361a0.dir/build.make:85: CMakeFiles/cmTC_361a0.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_361a0/fast] Error 2
+
+
+File /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef bitncmp
+  return ((int*)(&bitncmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the closesocket exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_948df/fast && /usr/bin/make  -f CMakeFiles/cmTC_948df.dir/build.make CMakeFiles/cmTC_948df.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_948df.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE -o CMakeFiles/cmTC_948df.dir/CheckSymbolExists.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘closesocket’ undeclared (first use in this function)
+   27 |   return ((int*)(&closesocket))[argc];
+      |                   ^~~~~~~~~~~
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_948df.dir/build.make:85: CMakeFiles/cmTC_948df.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_948df/fast] Error 2
+
+
+File /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef closesocket
+  return ((int*)(&closesocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the CloseSocket exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8f321/fast && /usr/bin/make  -f CMakeFiles/cmTC_8f321.dir/build.make CMakeFiles/cmTC_8f321.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8f321.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE -o CMakeFiles/cmTC_8f321.dir/CheckSymbolExists.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘CloseSocket’ undeclared (first use in this function)
+   27 |   return ((int*)(&CloseSocket))[argc];
+      |                   ^~~~~~~~~~~
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_8f321.dir/build.make:85: CMakeFiles/cmTC_8f321.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_8f321/fast] Error 2
+
+
+File /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CloseSocket
+  return ((int*)(&CloseSocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the inet_net_pton exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3333e/fast && /usr/bin/make  -f CMakeFiles/cmTC_3333e.dir/build.make CMakeFiles/cmTC_3333e.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3333e.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE -o CMakeFiles/cmTC_3333e.dir/CheckSymbolExists.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3333e
+/home/azureuser/.local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3333e.dir/link.txt --verbose=1
+/usr/bin/cc -rdynamic CMakeFiles/cmTC_3333e.dir/CheckSymbolExists.c.o -o cmTC_3333e  -lnsl -lrt 
+/usr/bin/ld: CMakeFiles/cmTC_3333e.dir/CheckSymbolExists.c.o: in function `main':
+CheckSymbolExists.c:(.text+0x1f): undefined reference to `inet_net_pton'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3333e.dir/build.make:106: cmTC_3333e] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_3333e/fast] Error 2
+
+
+File /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef inet_net_pton
+  return ((int*)(&inet_net_pton))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the ioctlsocket exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_44085/fast && /usr/bin/make  -f CMakeFiles/cmTC_44085.dir/build.make CMakeFiles/cmTC_44085.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_44085.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE -o CMakeFiles/cmTC_44085.dir/CheckSymbolExists.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘ioctlsocket’ undeclared (first use in this function)
+   27 |   return ((int*)(&ioctlsocket))[argc];
+      |                   ^~~~~~~~~~~
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_44085.dir/build.make:85: CMakeFiles/cmTC_44085.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_44085/fast] Error 2
+
+
+File /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef ioctlsocket
+  return ((int*)(&ioctlsocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the IoctlSocket exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_91a15/fast && /usr/bin/make  -f CMakeFiles/cmTC_91a15.dir/build.make CMakeFiles/cmTC_91a15.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_91a15.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE -o CMakeFiles/cmTC_91a15.dir/CheckSymbolExists.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘IoctlSocket’ undeclared (first use in this function)
+   27 |   return ((int*)(&IoctlSocket))[argc];
+      |                   ^~~~~~~~~~~
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_91a15.dir/build.make:85: CMakeFiles/cmTC_91a15.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_91a15/fast] Error 2
+
+
+File /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef IoctlSocket
+  return ((int*)(&IoctlSocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strcmpi exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fe4a0/fast && /usr/bin/make  -f CMakeFiles/cmTC_fe4a0.dir/build.make CMakeFiles/cmTC_fe4a0.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fe4a0.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE -o CMakeFiles/cmTC_fe4a0.dir/CheckSymbolExists.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘strcmpi’ undeclared (first use in this function); did you mean ‘strcmp’?
+   27 |   return ((int*)(&strcmpi))[argc];
+      |                   ^~~~~~~
+      |                   strcmp
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_fe4a0.dir/build.make:85: CMakeFiles/cmTC_fe4a0.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_fe4a0/fast] Error 2
+
+
+File /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcmpi
+  return ((int*)(&strcmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the stricmp exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9d1eb/fast && /usr/bin/make  -f CMakeFiles/cmTC_9d1eb.dir/build.make CMakeFiles/cmTC_9d1eb.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9d1eb.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE -o CMakeFiles/cmTC_9d1eb.dir/CheckSymbolExists.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘stricmp’ undeclared (first use in this function); did you mean ‘strncmp’?
+   27 |   return ((int*)(&stricmp))[argc];
+      |                   ^~~~~~~
+      |                   strncmp
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_9d1eb.dir/build.make:85: CMakeFiles/cmTC_9d1eb.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_9d1eb/fast] Error 2
+
+
+File /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef stricmp
+  return ((int*)(&stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strncmpi exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_97d40/fast && /usr/bin/make  -f CMakeFiles/cmTC_97d40.dir/build.make CMakeFiles/cmTC_97d40.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_97d40.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE -o CMakeFiles/cmTC_97d40.dir/CheckSymbolExists.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘strncmpi’ undeclared (first use in this function); did you mean ‘strncmp’?
+   27 |   return ((int*)(&strncmpi))[argc];
+      |                   ^~~~~~~~
+      |                   strncmp
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_97d40.dir/build.make:85: CMakeFiles/cmTC_97d40.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_97d40/fast] Error 2
+
+
+File /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strncmpi
+  return ((int*)(&strncmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strnicmp exist failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0c3c0/fast && /usr/bin/make  -f CMakeFiles/cmTC_0c3c0.dir/build.make CMakeFiles/cmTC_0c3c0.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0c3c0.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -fPIE -o CMakeFiles/cmTC_0c3c0.dir/CheckSymbolExists.c.o -c /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: error: ‘strnicmp’ undeclared (first use in this function); did you mean ‘strncmp’?
+   27 |   return ((int*)(&strnicmp))[argc];
+      |                   ^~~~~~~~
+      |                   strncmp
+/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:27:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_0c3c0.dir/build.make:85: CMakeFiles/cmTC_0c3c0.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_0c3c0/fast] Error 2
+
+
+File /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdbool.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <netdb.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/ioctl.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/uio.h>
+#include <time.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strnicmp
+  return ((int*)(&strnicmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function __system_property_get exists failed with the following output:
+Change Dir: /home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_27d1b/fast && /usr/bin/make  -f CMakeFiles/cmTC_27d1b.dir/build.make CMakeFiles/cmTC_27d1b.dir/build
+make[1]: Entering directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_27d1b.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_GNU_SOURCE -D_POSIX_C_SOURCE=199309L -D_XOPEN_SOURCE=600  -DCHECK_FUNCTION_EXISTS=__system_property_get -fPIE -o CMakeFiles/cmTC_27d1b.dir/CheckFunctionExists.c.o -c /home/azureuser/.local/share/cmake-3.19/Modules/CheckFunctionExists.c
+Linking C executable cmTC_27d1b
+/home/azureuser/.local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_27d1b.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=__system_property_get -rdynamic CMakeFiles/cmTC_27d1b.dir/CheckFunctionExists.c.o -o cmTC_27d1b  -lnsl -lrt 
+/usr/bin/ld: CMakeFiles/cmTC_27d1b.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `__system_property_get'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_27d1b.dir/build.make:106: cmTC_27d1b] Error 1
+make[1]: Leaving directory '/home/azureuser/Cloud-Computing/protobuf/cmake/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:140: cmTC_27d1b/fast] Error 2
+
+
+

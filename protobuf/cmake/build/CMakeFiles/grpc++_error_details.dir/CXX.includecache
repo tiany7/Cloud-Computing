@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../../include/grpc/impl/codegen/status.h
+
+../../include/grpcpp/impl/codegen/config.h
+string
+-
+
+../../include/grpcpp/impl/codegen/status.h
+grpc/impl/codegen/status.h
+-
+grpcpp/impl/codegen/config.h
+-
+grpcpp/impl/codegen/status_code_enum.h
+-
+
+../../include/grpcpp/impl/codegen/status_code_enum.h
+
+../../include/grpcpp/support/error_details.h
+grpcpp/support/status.h
+-
+
+../../include/grpcpp/support/status.h
+grpcpp/impl/codegen/status.h
+-
+
+/home/azureuser/Cloud-Computing/protobuf/src/cpp/util/error_details.cc
+grpcpp/support/error_details.h
+-
+

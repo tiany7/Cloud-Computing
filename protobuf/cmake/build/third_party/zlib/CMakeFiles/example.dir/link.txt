@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/example.dir/test/example.o -o example  -Wl,-rpath,/home/azureuser/Cloud-Computing/protobuf/cmake/build/third_party/zlib libz.so.1.2.11 
