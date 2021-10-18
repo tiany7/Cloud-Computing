@@ -15,7 +15,7 @@ using namespace wwadd;
 class AdderServiceImpl final : public Adder::Service {
     Status add(ServerContext* context, const AddReq* request,
                     wwadd::AddRsp* reply) override {
-        reply->set_result(request->a() + request->a());
+        reply->set_result(request->a() + request->b());
         return Status::OK;
     }
 };

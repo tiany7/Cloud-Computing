@@ -15,5 +15,13 @@ cc_binary(
             "//:grpc++",],
     copts = ["-std=c++17"],
 )
-
+cc_binary(
+    name = "wwaddclient",
+    srcs = ["wwtestclient.cpp"],
+    deps = [":wwlib",
+            "//wwutils:wwfastlog",
+            "//:grpc++_reflection",
+            "//:grpc++",],
+    copts = ["-std=c++17"],
+)
 
