@@ -28,6 +28,7 @@ XLOG_LER(var...): is used to print variables that could potentially cause a prob
 XLOG_ERR(var...): is used to print variables when the server is in an invalid state. The text color is red, meaning read alert. This should only be used when the invalid state actually cause a serious problem!
 
 **使用方法**
+
 LOG(var...): 打印所有函数的调用情况。日志字体为白色，用于记录所有不重要或者不关切的函数信息，不要对重要信息使用此日志。
 
 XLOG(var...): 打印所有不会造成麻烦的调试信息，日志字体为绿色，切记不要滥用！！！ 我们不希望所有的日志信息都是绿色！！！不要用于打印日常信息，在最终上线之前请务必移除不重要的或者不在观察的信息！
