@@ -1,0 +1,21 @@
+syntax = "proto2";
+option cc_generic_services = true;
+
+
+message Content
+{
+  optional int32  id = 1;
+  optional string str = 2;
+  optional int32  opt = 3;
+}
+
+message AddReq{
+  optional int32 a = 1;
+  optional int32 b = 2;
+}
+message AddRsp{
+  required int32 result = 1;
+}
+service Adder{
+  rpc add(AddReq) returns(AddRsp);
+}
