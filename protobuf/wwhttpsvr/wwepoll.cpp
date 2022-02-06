@@ -1,95 +1,177 @@
-#include <iostream>
-#include <cassert>
-#include <cstring> // perror
-
-#include <unistd.h> // close
-
 #include "wwepoll.h"
-#include "wwhttprequest.h"
-#include "wwthreadpool.h"
-#include "wwutils/fastlog.h"
-using namespace swings;
 
-Epoll::Epoll() 
-    : epollFd_(::epoll_create1(EPOLL_CLOEXEC)),
-      events_(MAXEVENTS)
+wwepollclient::wwepollclient() : epoll_fd(epoll_create1(EPOLL_CLOEXEC)),
+                                 ready_list(256)
 {
-    assert(epollFd_ >= 0);
-    LOG(epollFd_);
+    LOG(epollfd, "created");
 }
 
-Epoll::~Epoll()
+wwepollclient::~wwepollclient()
 {
-    ::close(epollFd_);
+
 }
 
-int Epoll::add(int fd, HttpRequest* request, int events)
+int32_t wwepollclient::epoll_add(std::shared_ptr<wwchannel> req,
+                                 int32_t timeout = 2000)
 {
-    struct epoll_event event;
-    event.data.ptr = (void*)request; // XXX 使用cast系列函数
-    event.events = events;
-    int ret = ::epoll_ctl(epollFd_, EPOLL_CTL_ADD, fd, &event);
-    return ret;
-}
+    int32_t in_fd = req->get_fd();
 
-int Epoll::mod(int fd, HttpRequest* request, int events)
-{
-    struct epoll_event event;
-    event.data.ptr = (void*)request; // XXX 使用cast系列函数
-    event.events = events;
-    int ret = ::epoll_ctl(epollFd_, EPOLL_CTL_MOD, fd, &event);
-    return ret;
-}
-
-int Epoll::del(int fd, HttpRequest* request, int events)
-{
-    struct epoll_event event;
-    event.data.ptr = (void*)request; // XXX 使用cast系列函数
-    event.events = events;
-    int ret = ::epoll_ctl(epollFd_, EPOLL_CTL_DEL, fd, &event);
-    return ret;
-}
-
-int Epoll::wait(int timeoutMs)
-{
-    int eventsNum = ::epoll_wait(epollFd_, &*events_.begin(), static_cast<int>(events_.size()), timeoutMs);
-    if(eventsNum == 0) {
-        // printf("[Epoll::wait] nothing happen, epoll timeout\n");
-    } else if(eventsNum < 0) {
-        printf("[Epoll::wait] epoll : %s\n", strerror(errno));
+    if (timeout > 0)
+    {
+        add_timer(req, timeout);
+        fd_2_data[fd] = req->get_holder(); // 添加holder映射
     }
-    
-    return eventsNum;
+
+    struct epoll_event event;
+    event.data.fd = in_fd;
+    event.events = req->get_events(); // 绑定epoll映射
+
+    req->update_last_event(); // 将event进行更新
+
+    fd_2_channel[fd] = req; // 完成映射
+
+    int32_t ret = epoll_ctl(epoll_fd, EPOLL_CTL_ADD, &event);
+
+    if (ret < 0)
+    {
+        XLOG_ERR(ret, epoll_fd, "epoll_add failed");
+        fd_2_channel[in_fd].reset(); // 释放链接
+        return EPOLL_ADD_ERROR; // 返回错误
+    }
+
+    LOG(in_fd, "added to epoll");
+    return 0;
 }
 
-void Epoll::handleEvent(int listenFd, std::shared_ptr<ThreadPool>& threadPool, int eventsNum)
+int32_t wwepollclient::epoll_mod(std::shared_ptr<wwchannel> req,
+                                 int32_t timeout = 2000)
 {
-    assert(eventsNum > 0);
-    for(int i = 0; i < eventsNum; ++i) {
-        HttpRequest* request = (HttpRequest*)(events_[i].data.ptr); // XXX 使用cast系列函数
-        int fd = request -> fd();
+    int32_t in_fd = req->get_fd();
 
-        if(fd == listenFd) {
-            // 新连接回调函数
-            onConnection_();
-        } else {
-            // 排除错误事件
-            if((events_[i].events & EPOLLERR) ||
-               (events_[i].events & EPOLLHUP) ||
-               (!events_[i].events & EPOLLIN)) {
-                request -> setNoWorking();
-                // 出错则关闭连接
-                onCloseConnection_(request);
-            } else if(events_[i].events & EPOLLIN) {
-                request -> setWorking();
-                threadPool -> pushJob(std::bind(onRequest_, request));
-            } else if(events_[i].events & EPOLLOUT) {
-                request -> setWorking();
-                threadPool -> pushJob(std::bind(onResponse_, request));
-            } else {
-                printf("[Epoll::handleEvent] unexpected event\n");
-            }
+    if (timeout > 0)
+    {
+        add_timer(req, timeout);
+    }
+
+    int32_t ret = req->update_last_event();
+
+    if (ret == 0)
+    {
+        struct epoll_event event;
+        event.data.fd = in_fd;
+        event.events = req->get_events();
+
+        int32_t e_ret = epoll_ctl(epoll_fd, EPOLL_CTL_MOD, &event);
+        if (e_ret)
+        {
+            XLOG_ERR(e_ret, epoll_fd, "epoll mod failed");
+            fd_2_channel[in_fd].reset();
+            return EPOLL_MOD_ERROR;
+        }
+
+    }
+    LOG(in_fd, "epoll mod done");
+    return 0;
+}
+
+int32_t wwepollclient::epoll_del(std::shared_ptr<wwchannel> req)
+{
+    int32_t in_fd = req->get_fd();
+
+    struct epoll_event event;
+    event.data.fd = in_fd;
+    event.events = req->get_last_event();
+
+    int32_t ret = epoll_ctl(epoll_fd, EPOLL_CTL_DEL, &event);
+    if (ret)
+    {
+        XLOG_ERR(epoll_fd, ret, "epoll del error");
+        return EPOLL_DEL_ERROR;
+    }
+    fd_2_channle[in_fd].reset();
+    fd_2_data[in_fd].reset();
+
+    LOG(in_fd, "epoll deleted");
+    return 0;
+}
+
+int32_t wwepollclient::poll(std::vector<std::shared_ptr<wwchannel>> &rd_list)
+{
+    while (true)
+    {
+        int32_t event_cnt = epoll_wait(epoll_fd, &*ready_list.begin(), ready_list.size(),
+                                       10000);
+        if (event_cnt < 0)
+        {
+            XLOG_ERR(epoll_fd, ready_list, event_cnt, "wait error");
+            return EPOLL_WAIT_ERROR;
+        }
+
+        int32_t ret = get_ready_events(rd_list, event_cnt);
+
+        if (ret != 0)
+        {
+            XLOG_ERR(epoll_fd, ret, "get rd_list error");
+            return EPOLL_RD_LST_ERROR;
+        }
+
+        if (!rd_list.empty())
+        {
+            break;
         }
     }
-    return;
+
+    LOG(epoll_fd, "fetch done");
+    return 0;
 }
+
+int32_t wwepollclient::get_epoll_fd()
+{
+    return this->epoll_fd;
+}
+
+int32_t wwepollclient::get_ready_events(std::vector<std::shared_ptr<wwchannel>> &rd_list,
+                                        int32_t events_num)
+{
+    for (int i = 0; i < events_sum; ++i)
+    {
+        int32_t fd = ready_list[i].fd;
+        auto current_channel = fd_2_channel[fd];
+
+        if (current_channel)
+        {
+            current_channel->set_R_event(ready_list[i].events);
+            current_channel->set_events(0);
+
+            rd_list.push_back(current_channel);
+        }
+        else
+        {
+            XLOG_ERR(fd, "channel is invalid");
+        }
+    }
+
+    return 0;
+}
+
+int32_t wwepollclient::add_timer(std::shared_ptr<wwchannel> request_data,
+                                 int32_t timeout)
+{
+    auto timer = request_data->get_holder();
+    if (t)
+    {
+        timer_ctl.add_timer(timer, timeout);
+    }
+    else
+    {
+        XLOG_LER(request_data->fd, "add timer failed");
+    }
+    return 0;
+}
+
+int32_t wwepollclient::handle_expired()
+{
+    timer_ctl.handle_expired_event();
+    return 0;
+}
+

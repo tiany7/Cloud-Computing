@@ -1,49 +1,52 @@
-#ifndef __EPOLL_H__
-#define __EPOLL_H__
+#ifndef WWEPOLL_H
+#define WWEPOLL_H
 
-#include <functional> // function
-#include <vector> // vector
-#include <memory> // shared_ptr
+#pragma once
 
-#include <sys/epoll.h> // epoll_event
 
-#define MAXEVENTS 1024
+#include <memory>
+#include <unordered_map>
+#include <vector>
+#include <stdlib.h>
+#include <stdint.h>
+#include <assert.h>
+#include <errno.h>
+#include <string.h>
+#include <deque>
+#include <queue>
 
-namespace swings {
+#include <sys/epoll.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <sys/socket.h>
 
-class HttpRequest;
-class ThreadPool;
+#include "wwutils/fastlog.h"
 
-class Epoll {
+class wwepollclient{
+private:
+    static const int32_t MAX_FD = 256;
+    int32_t epoll_fd;
+    std::vector<epoll_event>ready_list;
+    std::map<int32_t, std::shared_ptr<wwchannel>> fd_2_channel;
+    std::map<int32_t, std::shared_ptr<wwhttpdata>> fd_2_data;
+    wwtimerclient timer_ctl;
+
 public:
-    using NewConnectionCallback = std::function<void()>;
-    using CloseConnectionCallback = std::function<void(HttpRequest*)>;
-    using HandleRequestCallback = std::function<void(HttpRequest*)>;
-    using HandleResponseCallback = std::function<void(HttpRequest*)>;
+    int32_t epoll_add(std::shared_ptr<wwchannel> req, int32_t timeout = 2000);
 
-    Epoll();
-    ~Epoll();
-    int add(int fd, HttpRequest* request, int events); // 注册新描述符
-    int mod(int fd, HttpRequest* request, int events); // 修改描述符状态
-    int del(int fd, HttpRequest* request, int events); // 从epoll中删除描述符
-    int wait(int timeoutMs); // 等待事件发生, 返回活跃描述符数量
-    void handleEvent(int listenFd, std::shared_ptr<ThreadPool>& threadPool, int eventsNum); // 调用事件处理函数
-    void setOnConnection(const NewConnectionCallback& cb) { onConnection_ = cb; } // 设置新连接回调函数
-    void setOnCloseConnection(const CloseConnectionCallback& cb) { onCloseConnection_ = cb; } // 设置关闭连接回调函数
-    void setOnRequest(const HandleRequestCallback& cb) { onRequest_ = cb; } // 设置处理请求回调函数
-    void setOnResponse(const HandleResponseCallback& cb) { onResponse_ = cb; } // 设置响应请求回调函数
+    int32_t epoll_mod(std::shared_ptr<wwchannel> req, int32_t timeout = 2000);
 
-private: 
-    using EventList = std::vector<struct epoll_event>;
-    
-    int epollFd_;
-    EventList events_;
-    NewConnectionCallback onConnection_;
-    CloseConnectionCallback onCloseConnection_;
-    HandleRequestCallback onRequest_;
-    HandleResponseCallback onResponse_;
-}; // class Epoll
+    int32_t epoll_del(std::shared_ptr<wwchannel> req);
 
-} // namespace swings
+    int32_t poll(std::vector<std::shared_ptr<wwchannel>> &rd_list);
 
+    int32_t get_ready_events(std::vector<std::shared_ptr<wwchannel>> &rd_list,
+                             int32_t events_num);
+
+    int32_t get_epoll_fd();
+
+    int32_t add_timer(std::shared_ptr<wwchannel> request_data, int32_t timeout);
+
+    int32_t handle_expired();
+};
 #endif
