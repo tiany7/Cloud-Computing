@@ -4,3 +4,4 @@
 #define EPOLL_DEL_ERROR 49002
 #define EPOLL_WAIT_ERROR 49003
 #define EPOLL_RD_LST_ERROR 49004
+#define ACTIVE_BEFORE_LOOP 49005 //代表在loop之前loop还没有停止
