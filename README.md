@@ -21,3 +21,12 @@ Special reference: http server is adapted from LinyaPool's github opensource rep
 下载并更新了mongodb， http 服务器，GRPC， Apache Thrift, BRPC 
 实现了读取http POST 方法参数的函数，支持通过GET/POST方法读取并且调用服务器服务的功能
 更多内容还在拓展中
+
+**Update 2021.11.9**
+Completely rewritten http server, integrated with c++17 features.
+Reformatted the code in c++ style. Indents and brackets are formatted by google style.
+logs and watches were placed to monitor the behavior of server.
+
+重写了linyacool的代码,加入了一些cpp11的新特性,并且优化了部分逻辑,去除了些许冗余
+重新格式化了代码, 空行和对齐按照google 标准进行
+添加了日志观察窗以观察服务器表现
