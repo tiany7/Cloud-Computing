@@ -22,7 +22,8 @@ Special reference: http server is adapted from LinyaPool's github opensource rep
 实现了读取http POST 方法参数的函数，支持通过GET/POST方法读取并且调用服务器服务的功能
 更多内容还在拓展中
 
-**Update 2021.11.9**
+**Update 2022.2.7**
+
 Completely rewritten http server, integrated with c++17 features.
 Reformatted the code in c++ style. Indents and brackets are formatted by google style.
 logs and watches were placed to monitor the behavior of server.
