@@ -73,7 +73,7 @@ int32_t wwchannel::handle_event()
     {
         if (error_handler)
         {
-            errorHandler_();
+            error_handler();
         }
         events = 0;
         return 0;
@@ -90,5 +90,45 @@ int32_t wwchannel::handle_event()
     }
     handle_connection();
 
+    LOG(fd_, events, R_events, "handle event done");
+    return 0;
+}
 
+
+int32_t wwchannel::handle_read()
+{
+    if (read_handler)
+    {
+        read_handler();
+    }
+
+    LOG(fd_, "handle read done");
+    return 0;
+}
+
+int32_t wwchannel::handle_write()
+{
+    if (write_handler)
+    {
+        write_handler();
+    }
+
+    LOG(fd_, "handle write done");
+    return 0;
+}
+
+int32_t wwchannel::handle_connection()
+{
+    if (connect_handler)
+    {
+        connect_handler();
+    }
+    LOG(fd_, "handle connect done");
+    return 0;
+}
+
+int32_t wwchannel::handle_error(int32_t fd, int32_t err_code, std::string err_msg)
+{
+
+    return 0;
 }
