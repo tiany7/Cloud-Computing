@@ -45,3 +45,12 @@ void wweventloopthread::thread_func()
     main_loop = nullptr;
 }
 
+wweventloop *wweventloopthreadpool::get_next_loop() {
+    assert(is_active);
+    auto cur_loop = loop;
+    if (!loops.empty()) {
+        cur_loop = loops[next];
+        next = (next + 1) % num_threads;
+    }
+    return cur_loop;
+}
