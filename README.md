@@ -1,7 +1,8 @@
 # Cloud-Computing
 This is the cloud computing project by tiany7 and Overstars.
 
-Update 2021.9.17  
+**Update 2021.9.17**  
+
 Updated the http server base functionalities and logger system. 
 The detailed info can be found at the wwutils directory and wwhttpsvr directory.
   
@@ -31,3 +32,9 @@ logs and watches were placed to monitor the behavior of server.
 重写了linyacool的代码,加入了一些cpp11的新特性,并且优化了部分逻辑,去除了些许冗余
 重新格式化了代码, 空行和对齐按照google 标准进行
 添加了日志观察窗以观察服务器表现
+
+Next direction:
+Completely debug the server. Implement it with some real-world functionalities. Implement an asynchronous logging system based on the original one.
+
+下一步目标
+把服务器调通，开始根据现实需求实现rpc接口服务。将日志加增为异步。
